@@ -1,16 +1,17 @@
 version: '3'
 services:
-    plex:
-        build: ./plex
+    portainer:
+        build: ./portainer
         ports:
-        - "5000:5000"
-    minecraft:
-        build: ./minecraft
-    mcmyadmin:
-        build: ./mcmyadmin
-    dockerui:
-        build: ./dockerui
-    music:
-        build:
-    file:
-        build:
+         - "9000:9000"
+        command: -H unix:///var/run/docker.sock
+        volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - portainer_data:/data
+
+volumes:
+    - portainer_data: /opt/portainer
+
+networks:
+    external:
+    name: "${s_net}"
