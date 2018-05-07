@@ -1,17 +1,42 @@
 version: '3'
 services:
     portainer:
-        build: ./portainer
-        ports:
-         - "9000:9000"
+        container_name: portainer
+        image: portainer/portainer
         command: -H unix:///var/run/docker.sock
         volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
-        - portainer_data:/data
-
-volumes:
-    - portainer_data: /opt/portainer
-
-networks:
-    external:
-    name: "${s_net}"
+            - /var/run/docker.sock:/var/run/docker.sock
+            - ../volumes/portainer:/data
+        network_mode: "host"
+        restart: always
+    plex:
+        container_name: plex
+        image: plexinc/pms-docker
+        volumes:
+            - ../volumes/plex/config:/config
+            - ../volumes/common/data:/data/
+        network_mode: "host"
+        restart: always
+        environment:
+            ADVERTISE_IP: "http://192.168.1.84:32400/"
+    owncloud:
+        container_name: owncloud
+        image: owncloud
+        restart: always
+        ports:
+            - "8080:80"
+        volumes:
+            - ../volumes/owncloud/apps:/var/www/html/apps
+            - ../volumes/owncloud/config:/var/www/html/config
+            - ../volumes/common/data:/var/www/html/data
+    mysql:
+        container_name: owncloud_db
+        image: mariadb
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: xxxxxxxx
+            MYSQL_USER: owncloud
+            MYSQL_PASSWORD: xxxxxxxx
+            MYSQL_DATABASE: owncloud
+        volumes:
+            - ../volumes/mysql:/var/lib/mysql
