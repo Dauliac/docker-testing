@@ -1,0 +1,130 @@
+May 07, 2018 15:52:43.923 [0x7f37a3bff700] INFO - Plex Media Scanner v1.12.3.4973-215c28d86 - ubuntu docker x86_64 - build: linux-ubuntu-x86_64 - GMT 00:00
+May 07, 2018 15:52:43.924 [0x7f37a3bff700] INFO - Linux version: 4.14.39-1-lts (#1 SMP Wed May 2 22:22:17 CEST 2018), language: C
+May 07, 2018 15:52:43.924 [0x7f37a3bff700] INFO - Processor Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz
+May 07, 2018 15:52:43.924 [0x7f37a3bff700] INFO - /usr/lib/plexmediaserver/Plex Media Scanner --analyze --log-file-suffix  Analysis --item 1
+May 07, 2018 15:52:43.923 [0x7f37af47c800] DEBUG - Opening 20 database sessions to library (com.plexapp.plugins.library), SQLite 3.13.0, threadsafe=1
+May 07, 2018 15:52:44.034 [0x7f37af47c800] DEBUG - Analyzing media parts for item 1 (Movies): 1
+May 07, 2018 15:52:44.035 [0x7f37af47c800] DEBUG - Downloading document http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:52:44.035 [0x7f37af47c800] DEBUG - HTTP requesting GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:52:44.037 [0x7f37af47c800] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:52:44.037 [0x7f37af47c800] DEBUG - Updating metadata item (save) (Movies) with ID 1
+May 07, 2018 15:52:44.065 [0x7f37af47c800] DEBUG - [ID 1] Media part analysis: /data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv
+May 07, 2018 15:52:44.065 [0x7f37af47c800] DEBUG - [MI] Opening input file: "/data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv"
+May 07, 2018 15:52:44.068 [0x7f37af47c800] DEBUG - [FFMPEG] - Setting default whitelist 'file,crypto'
+May 07, 2018 15:52:44.071 [0x7f37af47c800] DEBUG - [FFMPEG] - Format matroska,webm probed with size=2048 and score=100
+May 07, 2018 15:52:44.071 [0x7f37af47c800] DEBUG - [FFMPEG] - st:0 removing common factor 1000000 from timebase
+May 07, 2018 15:52:44.071 [0x7f37af47c800] DEBUG - [FFMPEG] - st:1 removing common factor 1000000 from timebase
+May 07, 2018 15:52:44.071 [0x7f37af47c800] INFO - CodecManager: obtaining decoder 'h264'
+May 07, 2018 15:52:44.071 [0x7f37af47c800] DEBUG - HTTP requesting GET https://plex.tv/api/codecs/h264_decoder?build=linux-ubuntu-x86_64&deviceId=71c08ec7-94d3-4969-8749-ad57262ae861&oldestPreviousVersion=legacy&version=7814ac9-1285
+May 07, 2018 15:52:44.358 [0x7f37af47c800] DEBUG - HTTP 200 response from GET https://plex.tv/api/codecs/h264_decoder?build=linux-ubuntu-x86_64&deviceId=71c08ec7-94d3-4969-8749-ad57262ae861&oldestPreviousVersion=legacy&version=7814ac9-1285
+May 07, 2018 15:52:44.361 [0x7f37af47c800] DEBUG - HTTP requesting GET https://downloads.plex.tv/codecs/7814ac9-1285/linux-ubuntu-x86_64/libh264_decoder.so
+May 07, 2018 15:52:46.002 [0x7f37af47c800] DEBUG - HTTP 200 response from GET https://downloads.plex.tv/codecs/7814ac9-1285/linux-ubuntu-x86_64/libh264_decoder.so
+May 07, 2018 15:52:46.026 [0x7f37af47c800] DEBUG - [FFMPEG] - Before avformat_find_stream_info() pos: 1024 bytes read:32768 seeks:0 nb_streams:2
+May 07, 2018 15:52:46.034 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 7, nal_ref_idc: 3
+May 07, 2018 15:52:46.034 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 8, nal_ref_idc: 3
+May 07, 2018 15:52:46.036 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 7, nal_ref_idc: 3
+May 07, 2018 15:52:46.036 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 8, nal_ref_idc: 3
+May 07, 2018 15:52:46.037 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 5, nal_ref_idc: 3
+May 07, 2018 15:52:46.043 [0x7f37af47c800] DEBUG - [FFMPEG] - no picture 
+May 07, 2018 15:52:46.052 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.058 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.064 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.070 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.080 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.092 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.102 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.110 [0x7f37af47c800] DEBUG - [FFMPEG] - All info found
+May 07, 2018 15:52:46.111 [0x7f37af47c800] DEBUG - [FFMPEG] - After avformat_find_stream_info() pos: 83742 bytes read:98304 seeks:0 frames:23
+May 07, 2018 15:52:46.112 [0x7f37af47c800] DEBUG - [MI]  * 557cc5c2aa46ebc5ce33af6e159a007df11a67e1 [mkv h264/opus] Duration: 53821ms, 1920x1080 (1.777778) 25.000fps, bitrate=3205kbps, audio channels=2, optimizedForStreaming=0 (/data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv)
+May 07, 2018 15:52:46.115 [0x7f37af47c800] DEBUG - [MI] Chapters had generic titles, clearing.
+May 07, 2018 15:52:46.115 [0x7f37af47c800] DEBUG - Downloading document http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:52:46.115 [0x7f37af47c800] DEBUG - HTTP requesting GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:52:46.117 [0x7f37af47c800] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:52:46.117 [0x7f37af47c800] DEBUG - Updating metadata item (save) (Movies) with ID 1
+May 07, 2018 15:52:46.130 [0x7f37af47c800] DEBUG - [MI] Closing input file: /data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv
+May 07, 2018 15:52:46.131 [0x7f37af47c800] DEBUG - [FFMPEG] - Statistics: 98304 bytes read, 0 seeks
+May 07, 2018 15:52:46.134 [0x7f37af47c800] DEBUG - Committing media stream changes for part 1
+May 07, 2018 15:52:46.144 [0x7f37af47c800] DEBUG - Updating media item 1, size=21564982, metadata_item_id=1
+May 07, 2018 15:52:46.144 [0x7f37af47c800] DEBUG - Updating part with ID=1 [/data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv]
+May 07, 2018 15:52:46.152 [0x7f37af47c800] DEBUG - [MI] Opening input file: "/data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv"
+May 07, 2018 15:52:46.152 [0x7f37af47c800] DEBUG - [FFMPEG] - Setting default whitelist 'file,crypto'
+May 07, 2018 15:52:46.153 [0x7f37af47c800] DEBUG - [FFMPEG] - Format matroska,webm probed with size=2048 and score=100
+May 07, 2018 15:52:46.153 [0x7f37af47c800] DEBUG - [FFMPEG] - st:0 removing common factor 1000000 from timebase
+May 07, 2018 15:52:46.153 [0x7f37af47c800] DEBUG - [FFMPEG] - st:1 removing common factor 1000000 from timebase
+May 07, 2018 15:52:46.153 [0x7f37af47c800] DEBUG - [FFMPEG] - Before avformat_find_stream_info() pos: 1024 bytes read:32768 seeks:0 nb_streams:2
+May 07, 2018 15:52:46.154 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 7, nal_ref_idc: 3
+May 07, 2018 15:52:46.154 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 8, nal_ref_idc: 3
+May 07, 2018 15:52:46.156 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 7, nal_ref_idc: 3
+May 07, 2018 15:52:46.156 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 8, nal_ref_idc: 3
+May 07, 2018 15:52:46.157 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 5, nal_ref_idc: 3
+May 07, 2018 15:52:46.170 [0x7f37af47c800] DEBUG - [FFMPEG] - no picture 
+May 07, 2018 15:52:46.196 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.209 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.218 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.227 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.236 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.244 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.252 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.260 [0x7f37af47c800] DEBUG - [FFMPEG] - All info found
+May 07, 2018 15:52:46.261 [0x7f37af47c800] DEBUG - [FFMPEG] - After avformat_find_stream_info() pos: 83742 bytes read:98304 seeks:0 frames:23
+May 07, 2018 15:52:46.261 [0x7f37af47c800] DEBUG - Creating /config/Library/Application Support/Plex Media Server/Media/localhost/5/57cc5c2aa46ebc5ce33af6e159a007df11a67e1.bundle/Contents/Thumbnails/thumb1.jpg (50.0%, 720x512).
+May 07, 2018 15:52:46.261 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 7, nal_ref_idc: 3
+May 07, 2018 15:52:46.261 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 8, nal_ref_idc: 3
+May 07, 2018 15:52:46.262 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 7, nal_ref_idc: 3
+May 07, 2018 15:52:46.262 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 8, nal_ref_idc: 3
+May 07, 2018 15:52:46.262 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 6, nal_ref_idc: 0
+May 07, 2018 15:52:46.262 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.262 [0x7f37af47c800] DEBUG - [FFMPEG] - Frame num gap 4 0
+May 07, 2018 15:52:46.265 [0x7f37af47c800] DEBUG - [FFMPEG] - Frame num gap 4 1
+May 07, 2018 15:52:46.268 [0x7f37af47c800] DEBUG - [FFMPEG] - Frame num gap 4 2
+May 07, 2018 15:52:46.272 [0x7f37af47c800] DEBUG - [FFMPEG] - no picture 
+May 07, 2018 15:52:46.288 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.450 [0x7f37af47c800] DEBUG - Loaded memory image of size 1920x1080.
+May 07, 2018 15:52:46.532 [0x7f37af47c800] DEBUG - [MI] Closing input file: /data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv
+May 07, 2018 15:52:46.532 [0x7f37af47c800] DEBUG - [FFMPEG] - Statistics: 219245 bytes read, 3 seeks
+May 07, 2018 15:52:46.532 [0x7f37af47c800] DEBUG - [MI] Opening input file: "/data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv"
+May 07, 2018 15:52:46.532 [0x7f37af47c800] DEBUG - [FFMPEG] - Setting default whitelist 'file,crypto'
+May 07, 2018 15:52:46.532 [0x7f37af47c800] DEBUG - [FFMPEG] - Format matroska,webm probed with size=2048 and score=100
+May 07, 2018 15:52:46.532 [0x7f37af47c800] DEBUG - [FFMPEG] - st:0 removing common factor 1000000 from timebase
+May 07, 2018 15:52:46.533 [0x7f37af47c800] DEBUG - [FFMPEG] - st:1 removing common factor 1000000 from timebase
+May 07, 2018 15:52:46.533 [0x7f37af47c800] DEBUG - [FFMPEG] - Before avformat_find_stream_info() pos: 1024 bytes read:32768 seeks:0 nb_streams:2
+May 07, 2018 15:52:46.533 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 7, nal_ref_idc: 3
+May 07, 2018 15:52:46.533 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 8, nal_ref_idc: 3
+May 07, 2018 15:52:46.533 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 7, nal_ref_idc: 3
+May 07, 2018 15:52:46.533 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 8, nal_ref_idc: 3
+May 07, 2018 15:52:46.533 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 5, nal_ref_idc: 3
+May 07, 2018 15:52:46.535 [0x7f37af47c800] DEBUG - [FFMPEG] - no picture 
+May 07, 2018 15:52:46.540 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.544 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.548 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.552 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.559 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.567 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.573 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.581 [0x7f37af47c800] DEBUG - [FFMPEG] - All info found
+May 07, 2018 15:52:46.582 [0x7f37af47c800] DEBUG - [FFMPEG] - After avformat_find_stream_info() pos: 83742 bytes read:98304 seeks:0 frames:23
+May 07, 2018 15:52:46.583 [0x7f37af47c800] DEBUG - Creating /config/Library/Application Support/Plex Media Server/Media/localhost/5/57cc5c2aa46ebc5ce33af6e159a007df11a67e1.bundle/Contents/Art/art1.jpg (50.0%, 1280x720).
+May 07, 2018 15:52:46.583 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 7, nal_ref_idc: 3
+May 07, 2018 15:52:46.583 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 8, nal_ref_idc: 3
+May 07, 2018 15:52:46.583 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 7, nal_ref_idc: 3
+May 07, 2018 15:52:46.583 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 8, nal_ref_idc: 3
+May 07, 2018 15:52:46.583 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 6, nal_ref_idc: 0
+May 07, 2018 15:52:46.584 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.584 [0x7f37af47c800] DEBUG - [FFMPEG] - Frame num gap 4 0
+May 07, 2018 15:52:46.587 [0x7f37af47c800] DEBUG - [FFMPEG] - Frame num gap 4 1
+May 07, 2018 15:52:46.589 [0x7f37af47c800] DEBUG - [FFMPEG] - Frame num gap 4 2
+May 07, 2018 15:52:46.593 [0x7f37af47c800] DEBUG - [FFMPEG] - no picture 
+May 07, 2018 15:52:46.608 [0x7f37af47c800] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:52:46.763 [0x7f37af47c800] DEBUG - Loaded memory image of size 1920x1080.
+May 07, 2018 15:52:46.913 [0x7f37af47c800] DEBUG - [MI] Closing input file: /data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv
+May 07, 2018 15:52:46.914 [0x7f37af47c800] DEBUG - [FFMPEG] - Statistics: 219245 bytes read, 3 seeks
+May 07, 2018 15:52:46.915 [0x7f37af47c800] DEBUG - Downloading document http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:52:46.915 [0x7f37af47c800] DEBUG - HTTP requesting GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:52:46.917 [0x7f37af47c800] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:52:46.917 [0x7f37af47c800] DEBUG - Updating metadata item (save) (Movies) with ID 1
+May 07, 2018 15:52:46.922 [0x7f379e7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=-1&mediaState=analyzing
+May 07, 2018 15:52:46.923 [0x7f379e7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=-1&mediaState=analyzing
+May 07, 2018 15:52:46.923 [0x7f379e7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=-1&mediaState=thumbnailing
+May 07, 2018 15:52:46.924 [0x7f379e7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=-1&mediaState=thumbnailing
+May 07, 2018 15:52:46.924 [0x7f379e7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=-1&mediaState=idle
+May 07, 2018 15:52:46.925 [0x7f379e7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=-1&mediaState=idle

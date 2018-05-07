@@ -1,0 +1,147 @@
+May 07, 2018 15:52:35.635 [0x7fe0cdfff700] INFO - Plex Media Scanner v1.12.3.4973-215c28d86 - ubuntu docker x86_64 - build: linux-ubuntu-x86_64 - GMT 00:00
+May 07, 2018 15:52:35.635 [0x7fe0cdfff700] INFO - Linux version: 4.14.39-1-lts (#1 SMP Wed May 2 22:22:17 CEST 2018), language: C
+May 07, 2018 15:52:35.635 [0x7fe0cdfff700] INFO - Processor Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz
+May 07, 2018 15:52:35.635 [0x7fe0cdfff700] INFO - /usr/lib/plexmediaserver/Plex Media Scanner --scan --refresh --section 1
+May 07, 2018 15:52:35.635 [0x7fe0d95e2800] DEBUG - Opening 20 database sessions to library (com.plexapp.plugins.library), SQLite 3.13.0, threadsafe=1
+May 07, 2018 15:52:35.756 [0x7fe0d95e2800] DEBUG - Scanning Movies using en(Plex Movie Scanner) with 0 current media items and 1 section locations in the database...
+May 07, 2018 15:52:35.756 [0x7fe0cc7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/cullTimeline?librarySectionID=1&sinceTime=1525707155
+May 07, 2018 15:52:35.757 [0x7fe0cc7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/cullTimeline?librarySectionID=1&sinceTime=1525707155
+May 07, 2018 15:52:35.839 [0x7fe0d95e2800] DEBUG - Performing a scan with 'Plex Movie Scanner' (language: en virtual: 0).
+May 07, 2018 15:52:35.840 [0x7fe0d95e2800] DEBUG -   * Scanning /data
+May 07, 2018 15:52:35.840 [0x7fe0d95e2800] DEBUG -     * Scanning directory /data (parent: no)
+May 07, 2018 15:52:35.855 [0x7fe0d95e2800] DEBUG - Adding subdirectory for scanner: "/data/cache"
+May 07, 2018 15:52:35.855 [0x7fe0d95e2800] DEBUG - Adding subdirectory for scanner: "/data/files_trashbin"
+May 07, 2018 15:52:35.855 [0x7fe0d95e2800] DEBUG - Adding subdirectory for scanner: "/data/files"
+May 07, 2018 15:52:35.857 [0x7fe0d95e2800] DEBUG -     * Scanning directory /data/cache (parent: yes)
+May 07, 2018 15:52:35.861 [0x7fe0d95e2800] DEBUG -     * Scanning directory /data/files (parent: yes)
+May 07, 2018 15:52:35.865 [0x7fe0d95e2800] DEBUG - Adding subdirectory for scanner: "/data/files/Movies"
+May 07, 2018 15:52:35.868 [0x7fe0d95e2800] DEBUG -     * Scanning directory /data/files/Movies (parent: yes)
+May 07, 2018 15:52:35.872 [0x7fe0d95e2800] DEBUG - Adding file for scanner: "/data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv"
+May 07, 2018 15:52:35.873 [0x7fe0d95e2800] DEBUG - Directory had 1 files, database had 0 files, can't skip.
+May 07, 2018 15:52:35.875 [0x7fe0d95e2800] DEBUG -       * Scanning Movies
+May 07, 2018 15:52:35.875 [0x7fe0d95e2800] DEBUG - Looking for path match for [/data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv]
+May 07, 2018 15:52:35.875 [0x7fe0d95e2800] DEBUG - Skipping hash check, no size match for 21564982 bytes.
+May 07, 2018 15:52:35.876 [0x7fe0d95e2800] DEBUG - No match for hash.
+May 07, 2018 15:52:35.879 [0x7fe0d95e2800] DEBUG - Downloading document http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:52:35.879 [0x7fe0d95e2800] DEBUG - HTTP requesting GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:52:35.880 [0x7fe0d95e2800] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:52:35.883 [0x7fe0d95e2800] DEBUG - Added new metadata item (Movies) with ID 1
+May 07, 2018 15:52:35.888 [0x7fe0d95e2800] DEBUG -     * Scanning directory /data/files_trashbin (parent: yes)
+May 07, 2018 15:52:35.888 [0x7fe0cc7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/create?librarySectionID=1&ids=1&types=1
+May 07, 2018 15:52:35.889 [0x7fe0ca14c700] DEBUG - Matching 'Movies' (ID 1) with agent com.plexapp.agents.imdb
+May 07, 2018 15:52:35.889 [0x7fe0ca14c700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/library/metadata/1/matches?agent=com.plexapp.agents.imdb&language=en&manual=0
+May 07, 2018 15:52:35.890 [0x7fe0cc7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/create?librarySectionID=1&ids=1&types=1
+May 07, 2018 15:52:35.890 [0x7fe0cc7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=2&metadataState=matching
+May 07, 2018 15:52:35.891 [0x7fe0cc7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=2&metadataState=matching
+May 07, 2018 15:52:35.892 [0x7fe0d95e2800] DEBUG - Adding subdirectory for scanner: "/data/files_trashbin/keys"
+May 07, 2018 15:52:35.892 [0x7fe0d95e2800] DEBUG - Adding subdirectory for scanner: "/data/files_trashbin/versions"
+May 07, 2018 15:52:35.892 [0x7fe0d95e2800] DEBUG - Adding subdirectory for scanner: "/data/files_trashbin/files"
+May 07, 2018 15:52:35.893 [0x7fe0d95e2800] DEBUG -     * Scanning directory /data/files_trashbin/files (parent: yes)
+May 07, 2018 15:52:35.898 [0x7fe0d95e2800] DEBUG - Adding subdirectory for scanner: "/data/files_trashbin/files/Photos.d1525707977"
+May 07, 2018 15:52:35.898 [0x7fe0d95e2800] DEBUG - Adding subdirectory for scanner: "/data/files_trashbin/files/Documents.d1525707977"
+May 07, 2018 15:52:35.898 [0x7fe0d95e2800] DEBUG - Adding file for scanner: "/data/files_trashbin/files/ownCloud Manual.pdf.d1525707977"
+May 07, 2018 15:52:35.899 [0x7fe0d95e2800] DEBUG -     * Scanning directory /data/files_trashbin/files/Documents.d1525707977 (parent: yes)
+May 07, 2018 15:52:35.903 [0x7fe0d95e2800] DEBUG - Adding file for scanner: "/data/files_trashbin/files/Documents.d1525707977/Example.odt"
+May 07, 2018 15:52:35.903 [0x7fe0d95e2800] DEBUG -     * Scanning directory /data/files_trashbin/files/Photos.d1525707977 (parent: yes)
+May 07, 2018 15:52:35.908 [0x7fe0d95e2800] DEBUG - Adding file for scanner: "/data/files_trashbin/files/Photos.d1525707977/San Francisco.jpg"
+May 07, 2018 15:52:35.908 [0x7fe0d95e2800] DEBUG - Adding file for scanner: "/data/files_trashbin/files/Photos.d1525707977/Paris.jpg"
+May 07, 2018 15:52:35.908 [0x7fe0d95e2800] DEBUG - Adding file for scanner: "/data/files_trashbin/files/Photos.d1525707977/Squirrel.jpg"
+May 07, 2018 15:52:35.908 [0x7fe0d95e2800] DEBUG -     * Scanning directory /data/files_trashbin/keys (parent: yes)
+May 07, 2018 15:52:35.912 [0x7fe0d95e2800] DEBUG -     * Scanning directory /data/files_trashbin/versions (parent: yes)
+May 07, 2018 15:52:35.923 [0x7fe0d95e2800] DEBUG - Removing 0 media items that were left.
+May 07, 2018 15:52:35.923 [0x7fe0d95e2800] DEBUG - Removing 0 directories that were left.
+May 07, 2018 15:52:35.923 [0x7fe0d95e2800] DEBUG - Updating directory '' (ID 1) to time 2018-05-07 15:46:17.
+May 07, 2018 15:52:35.926 [0x7fe0d95e2800] DEBUG - Updating directory 'cache' (ID 2) to time 2018-05-07 15:46:08.
+May 07, 2018 15:52:35.931 [0x7fe0d95e2800] DEBUG - Updating directory 'files' (ID 3) to time 2018-05-07 15:46:30.
+May 07, 2018 15:52:35.935 [0x7fe0d95e2800] DEBUG - Updating directory 'files/Movies' (ID 4) to time 2018-05-07 15:51:23.
+May 07, 2018 15:52:35.943 [0x7fe0d95e2800] DEBUG - Updating directory 'files_trashbin' (ID 5) to time 2018-05-07 15:46:17.
+May 07, 2018 15:52:35.946 [0x7fe0d95e2800] DEBUG - Updating directory 'files_trashbin/files' (ID 6) to time 2018-05-07 15:46:17.
+May 07, 2018 15:52:35.951 [0x7fe0d95e2800] DEBUG - Updating directory 'files_trashbin/files/Documents.d1525707977' (ID 7) to time 2018-05-07 15:46:09.
+May 07, 2018 15:52:35.955 [0x7fe0d95e2800] DEBUG - Updating directory 'files_trashbin/files/Photos.d1525707977' (ID 8) to time 2018-05-07 15:46:09.
+May 07, 2018 15:52:35.958 [0x7fe0d95e2800] DEBUG - Updating directory 'files_trashbin/keys' (ID 9) to time 2018-05-07 15:46:17.
+May 07, 2018 15:52:35.962 [0x7fe0d95e2800] DEBUG - Updating directory 'files_trashbin/versions' (ID 10) to time 2018-05-07 15:46:17.
+May 07, 2018 15:53:48.594 [0x7fe0ca14c700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/library/metadata/1/matches?agent=com.plexapp.agents.imdb&language=en&manual=0
+May 07, 2018 15:53:48.594 [0x7fe0ca14c700] DEBUG -  * Score: 68 (Teen Titans Go! To the Movies)
+May 07, 2018 15:53:48.594 [0x7fe0ca14c700] DEBUG - Refreshing metadata for 'Movies' (agent: com.plexapp.agents.imdb)
+May 07, 2018 15:53:48.594 [0x7fe0ca14c700] DEBUG - Refreshing GUID: 'local://1'
+May 07, 2018 15:53:48.595 [0x7fe0ca14c700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/system/agents/update?mediaType=1&force=1&guid=local%3A%2F%2F1&id=1
+May 07, 2018 15:53:48.596 [0x7fe0cc7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=3&metadataState=queued
+May 07, 2018 15:53:48.598 [0x7fe0cc7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=3&metadataState=queued
+May 07, 2018 15:53:48.620 [0x7fe0ca14c700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/system/agents/update?mediaType=1&force=1&guid=local%3A%2F%2F1&id=1
+May 07, 2018 15:53:48.620 [0x7fe0d95e2800] DEBUG - Refreshing section 1 of type: 1
+May 07, 2018 15:53:48.622 [0x7fe0ca14c700] DEBUG - Refreshing 1 IDs.
+May 07, 2018 15:53:48.622 [0x7fe0ca14c700] DEBUG - Matching 'Movies' (ID 1) with agent com.plexapp.agents.imdb
+May 07, 2018 15:53:48.623 [0x7fe0cc7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=2&metadataState=matching
+May 07, 2018 15:53:48.623 [0x7fe0ca14c700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/library/metadata/1/matches?agent=com.plexapp.agents.imdb&language=en&manual=0
+May 07, 2018 15:53:48.626 [0x7fe0cc7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=2&metadataState=matching
+May 07, 2018 15:53:57.620 [0x7fe0ca14c700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/library/metadata/1/matches?agent=com.plexapp.agents.imdb&language=en&manual=0
+May 07, 2018 15:53:57.620 [0x7fe0ca14c700] DEBUG -  * Score: 96 (The Movies)
+May 07, 2018 15:53:57.620 [0x7fe0ca14c700] DEBUG - Setting GUID for metadata item 1 (title: The Movies) to com.plexapp.agents.imdb://tt0016129?lang=en (thumb=)
+May 07, 2018 15:53:57.622 [0x7fe0ca14c700] DEBUG - Migrating metadata settings from local://1 -> com.plexapp.agents.imdb://tt0016129?lang=en
+May 07, 2018 15:53:57.622 [0x7fe0cc7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=3
+May 07, 2018 15:53:57.623 [0x7fe0ca14c700] DEBUG - Downloading document http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.623 [0x7fe0ca14c700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.623 [0x7fe0cc7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=3
+May 07, 2018 15:53:57.625 [0x7fe0ca14c700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.626 [0x7fe0ca14c700] DEBUG - Updating metadata item (save) (Movies) with ID 1
+May 07, 2018 15:53:57.635 [0x7fe0ca14c700] DEBUG - No match for item 1's GUID com.plexapp.agents.imdb://tt0016129?lang=en, we're just changing its identity.
+May 07, 2018 15:53:57.635 [0x7fe0ca14c700] DEBUG - Downloading document http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.635 [0x7fe0ca14c700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.637 [0x7fe0ca14c700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.637 [0x7fe0ca14c700] DEBUG - Updating metadata item (save) (The Movies) with ID 1
+May 07, 2018 15:53:57.642 [0x7fe0ca14c700] DEBUG - Refreshing metadata for 'The Movies' (agent: com.plexapp.agents.imdb)
+May 07, 2018 15:53:57.642 [0x7fe0ca14c700] DEBUG - Refreshing GUID: 'com.plexapp.agents.imdb://tt0016129?lang=en'
+May 07, 2018 15:53:57.642 [0x7fe0cc7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=3&metadataState=queued
+May 07, 2018 15:53:57.643 [0x7fe0ca14c700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/system/agents/update?mediaType=1&force=1&guid=com%2Eplexapp%2Eagents%2Eimdb%3A%2F%2Ftt0016129%3Flang%3Den&id=1
+May 07, 2018 15:53:57.645 [0x7fe0cc7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=3&metadataState=queued
+May 07, 2018 15:53:57.667 [0x7fe0ca14c700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/system/agents/update?mediaType=1&force=1&guid=com%2Eplexapp%2Eagents%2Eimdb%3A%2F%2Ftt0016129%3Flang%3Den&id=1
+May 07, 2018 15:53:57.668 [0x7fe0c93ff700] DEBUG - MediaItem::PerformBackgroundAnalysis on 1
+May 07, 2018 15:53:57.670 [0x7fe0c93ff700] DEBUG - Downloading document http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.670 [0x7fe0c93ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.672 [0x7fe0c93ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.672 [0x7fe0c93ff700] DEBUG - Updating metadata item (save) (The Movies) with ID 1
+May 07, 2018 15:53:57.676 [0x7fe0c93ff700] DEBUG - [ID 1] Media part analysis: /data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv
+May 07, 2018 15:53:57.676 [0x7fe0c93ff700] DEBUG - [MI] Opening input file: "/data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv"
+May 07, 2018 15:53:57.677 [0x7fe0c93ff700] DEBUG - [FFMPEG] - Setting default whitelist 'file,crypto'
+May 07, 2018 15:53:57.680 [0x7fe0c93ff700] DEBUG - [FFMPEG] - Format matroska,webm probed with size=2048 and score=100
+May 07, 2018 15:53:57.680 [0x7fe0c93ff700] DEBUG - [FFMPEG] - st:0 removing common factor 1000000 from timebase
+May 07, 2018 15:53:57.680 [0x7fe0c93ff700] DEBUG - [FFMPEG] - st:1 removing common factor 1000000 from timebase
+May 07, 2018 15:53:57.680 [0x7fe0c93ff700] DEBUG - [FFMPEG] - Before avformat_find_stream_info() pos: 1024 bytes read:32768 seeks:0 nb_streams:2
+May 07, 2018 15:53:57.684 [0x7fe0c93ff700] DEBUG - [FFMPEG] - nal_unit_type: 7, nal_ref_idc: 3
+May 07, 2018 15:53:57.684 [0x7fe0c93ff700] DEBUG - [FFMPEG] - nal_unit_type: 8, nal_ref_idc: 3
+May 07, 2018 15:53:57.685 [0x7fe0c93ff700] DEBUG - [FFMPEG] - nal_unit_type: 7, nal_ref_idc: 3
+May 07, 2018 15:53:57.685 [0x7fe0c93ff700] DEBUG - [FFMPEG] - nal_unit_type: 8, nal_ref_idc: 3
+May 07, 2018 15:53:57.686 [0x7fe0c93ff700] DEBUG - [FFMPEG] - nal_unit_type: 5, nal_ref_idc: 3
+May 07, 2018 15:53:57.688 [0x7fe0c93ff700] DEBUG - [FFMPEG] - no picture 
+May 07, 2018 15:53:57.694 [0x7fe0c93ff700] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:53:57.697 [0x7fe0c93ff700] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:53:57.702 [0x7fe0c93ff700] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:53:57.706 [0x7fe0c93ff700] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:53:57.712 [0x7fe0c93ff700] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:53:57.719 [0x7fe0c93ff700] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:53:57.727 [0x7fe0c93ff700] DEBUG - [FFMPEG] - nal_unit_type: 1, nal_ref_idc: 2
+May 07, 2018 15:53:57.734 [0x7fe0c93ff700] DEBUG - [FFMPEG] - All info found
+May 07, 2018 15:53:57.735 [0x7fe0c93ff700] DEBUG - [FFMPEG] - After avformat_find_stream_info() pos: 83742 bytes read:98304 seeks:0 frames:23
+May 07, 2018 15:53:57.736 [0x7fe0c93ff700] DEBUG - [MI]  * 557cc5c2aa46ebc5ce33af6e159a007df11a67e1 [mkv h264/opus] Duration: 53821ms, 1920x1080 (1.777778) 25.000fps, bitrate=3205kbps, audio channels=2, optimizedForStreaming=0 (/data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv)
+May 07, 2018 15:53:57.737 [0x7fe0c93ff700] DEBUG - [MI] Chapters had generic titles, clearing.
+May 07, 2018 15:53:57.737 [0x7fe0c93ff700] DEBUG - Downloading document http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.737 [0x7fe0c93ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.739 [0x7fe0c93ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.739 [0x7fe0c93ff700] DEBUG - Updating metadata item (save) (The Movies) with ID 1
+May 07, 2018 15:53:57.743 [0x7fe0c93ff700] DEBUG - [MI] Closing input file: /data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv
+May 07, 2018 15:53:57.744 [0x7fe0c93ff700] DEBUG - [FFMPEG] - Statistics: 98304 bytes read, 0 seeks
+May 07, 2018 15:53:57.744 [0x7fe0c93ff700] DEBUG - Committing media stream changes for part 1
+May 07, 2018 15:53:57.748 [0x7fe0c93ff700] DEBUG - Updating media item 1, size=21564982, metadata_item_id=1
+May 07, 2018 15:53:57.748 [0x7fe0c93ff700] DEBUG - Updating part with ID=1 [/data/files/Movies/7 jours de voyage sans argent en Europe (mercredi 18H00)-44fIY4VJINo.mkv]
+May 07, 2018 15:53:57.753 [0x7fe0c93ff700] DEBUG - Downloading document http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.753 [0x7fe0c93ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.755 [0x7fe0c93ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/library/changestamp
+May 07, 2018 15:53:57.755 [0x7fe0c93ff700] DEBUG - Updating metadata item (save) (The Movies) with ID 1
+May 07, 2018 15:53:57.760 [0x7fe0cc7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=-1&mediaState=analyzing
+May 07, 2018 15:53:57.760 [0x7fe0cc7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=-1&mediaState=analyzing
+May 07, 2018 15:53:57.761 [0x7fe0cc7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=-1&mediaState=thumbnailing
+May 07, 2018 15:53:57.762 [0x7fe0cc7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=-1&mediaState=thumbnailing
+May 07, 2018 15:53:57.762 [0x7fe0cc7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=-1&mediaState=idle
+May 07, 2018 15:53:57.763 [0x7fe0cc7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=-1&mediaState=idle
+May 07, 2018 15:53:57.763 [0x7fe0cc7ff700] DEBUG - HTTP requesting GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=1
+May 07, 2018 15:53:57.765 [0x7fe0cc7ff700] DEBUG - HTTP 200 response from GET http://127.0.0.1:32400/:/metadata/notify/changeItemState?librarySectionID=1&metadataItemID=1&metadataType=1&state=1

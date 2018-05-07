@@ -1,0 +1,198 @@
+2018-05-07 15:52:36,536 (7f481a95d700) :  INFO (core:349) - Starting framework core - Version: 2.6.3, Build: 215c28d (Thu Apr 12 20:28:10 UTC 2018)
+2018-05-07 15:52:36,537 (7f481a95d700) :  DEBUG (core:361) - Using the elevated policy
+2018-05-07 15:52:36,537 (7f481a95d700) :  DEBUG (core:450) - Starting runtime component.
+2018-05-07 15:52:36,542 (7f481a95d700) :  DEBUG (core:450) - Starting caching component.
+2018-05-07 15:52:36,543 (7f481a95d700) :  DEBUG (core:450) - Starting data component.
+2018-05-07 15:52:36,543 (7f481a95d700) :  DEBUG (core:450) - Starting networking component.
+2018-05-07 15:52:36,544 (7f481a95d700) :  DEBUG (networking:284) - Loaded HTTP cookies
+2018-05-07 15:52:36,544 (7f481a95d700) :  DEBUG (networking:452) - Setting the default network timeout to 20.0
+2018-05-07 15:52:36,545 (7f481a95d700) :  DEBUG (core:450) - Starting localization component.
+2018-05-07 15:52:36,546 (7f481a95d700) :  INFO (localization:409) - Setting the default locale to en-us
+2018-05-07 15:52:36,546 (7f481a95d700) :  DEBUG (core:450) - Starting messaging component.
+2018-05-07 15:52:36,546 (7f481a95d700) :  DEBUG (core:450) - Starting debugging component.
+2018-05-07 15:52:36,547 (7f481a95d700) :  DEBUG (core:450) - Starting services component.
+2018-05-07 15:52:36,547 (7f481a95d700) :  DEBUG (core:450) - Starting myplex component.
+2018-05-07 15:52:36,547 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/system/messaging/clear_events/com.plexapp.agents.imdb'
+2018-05-07 15:52:36,547 (7f481a95d700) :  DEBUG (core:450) - Starting notifications component.
+2018-05-07 15:52:36,649 (7f481a95d700) :  DEBUG (accessor:68) - Creating a new model access point for provider com.plexapp.agents.imdb in namespace 'metadata'
+2018-05-07 15:52:36,653 (7f481a95d700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.system/resourceHashes'
+2018-05-07 15:52:36,837 (7f47faffd700) :  DEBUG (services:265) - Plug-in is not daemonized - loading services from system
+2018-05-07 15:52:36,837 (7f481a95d700) :  DEBUG (runtime:1117) - Created a thread named 'load_all_services'
+2018-05-07 15:52:36,839 (7f481a95d700) :  DEBUG (runtime:1117) - Created a thread named 'get_server_info'
+2018-05-07 15:52:36,839 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.system/messaging/function/X0J1bmRsZVNlcnZpY2U6QWxsU2VydmljZXM_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMApyMAo_'
+2018-05-07 15:52:36,839 (7f47f9fbb700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400'
+2018-05-07 15:52:36,839 (7f481a95d700) :  DEBUG (core:150) - Finished starting framework core
+2018-05-07 15:52:36,841 (7f481a95d700) :  DEBUG (core:560) - Loading plug-in code
+2018-05-07 15:52:37,145 (7f47f9fbb700) :  DEBUG (core:538) - Machine identifier is 575aa9eac3e95c1c835d04dde635a332c19495c0
+2018-05-07 15:52:37,145 (7f47f9fbb700) :  DEBUG (core:539) - Server version is 1.12.3.4973-215c28d86
+2018-05-07 15:52:37,254 (7f47faffd700) :  DEBUG (services:362) - Loaded services
+2018-05-07 15:52:37,261 (7f47fa7bc700) :  DEBUG (services:438) - No shared code to load
+2018-05-07 15:52:37,355 (7f481a95d700) :  DEBUG (core:566) - Finished loading plug-in code
+2018-05-07 15:52:37,465 (7f481a95d700) :  DEBUG (agentkit:1115) - Creating new agent class called PlexMovieAgent
+2018-05-07 15:52:37,466 (7f481a95d700) :  DEBUG (agentkit:933) - Updating agent information: [{'media_types': ['Movie'], 'accepts_from': ['com.plexapp.agents.localmedia'], 'fallback_agent': None, 'contributes_to': ['com.plexapp.agents.themoviedb'], 'languages': ['en', 'sv', 'fr', 'es', 'nl', 'de', 'it', 'da', 'ar', 'ca', 'zh', 'cs', 'et', 'fi', 'el', 'he', 'hi', 'hu', 'id', 'ja', 'ko', 'lv', 'no', 'fa', 'pl', 'pt', 'ro', 'ru', 'sk', 'th', 'tr', 'uk', 'vi'], 'persist_stored_files': True, 'version': 0, 'primary_provider': True, 'prefs': True, 'name': 'Plex Movie'}]
+2018-05-07 15:52:37,467 (7f481a95d700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.system/messaging/function/X0FnZW50U2VydmljZTpVcGRhdGVJbmZv/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQo3CmRpY3QKbGlzdApkaWN0Cmxpc3QKbGlzdApsaXN0Cmxpc3QKMgpzMjMKY29tLnBsZXhhcHAuYWdlbnRzLmltZGJzMTAKaWRlbnRpZmllcnIxCnMxMAphZ2VudF9pbmZvMQpyMgoxMApyMwpzMTEKbWVkaWFfdHlwZXNyNApzMTIKYWNjZXB0c19mcm9tbnMxNApmYWxsYmFja19hZ2VudHI1CnMxNApjb250cmlidXRlc190b3I2CnM5Cmxhbmd1YWdlc2IxczIwCnBlcnNpc3Rfc3RvcmVkX2ZpbGVzaTAKczcKdmVyc2lvbmIxczE2CnByaW1hcnlfcHJvdmlkZXJiMXM1CnByZWZzczEwClBsZXggTW92aWVzNApuYW1lMQpzNQpNb3ZpZTEKczI5CmNvbS5wbGV4YXBwLmFnZW50cy5sb2NhbG1lZGlhMQpzMjkKY29tLnBsZXhhcHAuYWdlbnRzLnRoZW1vdmllZGIzMwpzMgplbnMyCnN2czIKZnJzMgplc3MyCm5sczIKZGVzMgppdHMyCmRhczIKYXJzMgpjYXMyCnpoczIKY3NzMgpldHMyCmZpczIKZWxzMgpoZXMyCmhpczIKaHVzMgppZHMyCmphczIKa29zMgpsdnMyCm5vczIKZmFzMgpwbHMyCnB0czIKcm9zMgpydXMyCnNrczIKdGhzMgp0cnMyCnVrczIKdmlyMAo_'
+2018-05-07 15:52:37,474 (7f481a95d700) :  INFO (core:611) - Started plug-in
+2018-05-07 15:52:37,474 (7f481a95d700) :  DEBUG (socketinterface:160) - Starting socket server
+2018-05-07 15:52:37,475 (7f481a95d700) :  DEBUG (runtime:1117) - Created a thread named 'start'
+2018-05-07 15:52:37,475 (7f481a95d700) :  INFO (socketinterface:184) - Socket server started on port 37975
+2018-05-07 15:52:37,475 (7f481a95d700) :  INFO (pipeinterface:25) - Entering run loop
+2018-05-07 15:52:37,476 (7f481a95d700) :  DEBUG (runtime:717) - Handling request GET /:/prefixes
+2018-05-07 15:52:37,477 (7f481a95d700) :  DEBUG (runtime:814) - Found route matching /:/prefixes
+2018-05-07 15:52:37,477 (7f481a95d700) :  DEBUG (runtime:924) - Response: [200] MediaContainer, 148 bytes
+2018-05-07 15:52:37,482 (7f47faffd700) :  DEBUG (runtime:717) - Handling request GET /:/plugins/com.plexapp.agents.imdb/messaging/function/X0FnZW50S2l0OlNlYXJjaA__/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoyCmRpY3QKZGljdAo2CnMyCmVuczQKbGFuZ2IwczYKbWFudWFsYjFzNwpwcmltYXJ5aTAKczcKdmVyc2lvbnIxCnM2Cmt3YXJnc3M1Ck1vdmllczEwCm1lZGlhX3R5cGU2CnMxNgphOTU3NTBiNGQ5ODZiZGYzczE3Cm9wZW5TdWJ0aXRsZXNIYXNoczYKTW92aWVzczQKbmFtZXMxMTkKJTJGZGF0YSUyRmZpbGVzJTJGTW92aWVzJTJGNyUyMGpvdXJzJTIwZGUlMjB2b3lhZ2UlMjBzYW5zJTIwYXJnZW50JTIwZW4lMjBFdXJvcGUlMjAobWVyY3JlZGklMjAxOEgwMCktNDRmSVk0VkpJTm8lMkVta3ZzOApmaWxlbmFtZXM0MAo1NTdjYzVjMmFhNDZlYmM1Y2UzM2FmNmUxNTlhMDA3ZGYxMWE2N2UxczgKcGxleEhhc2hzMgotMXM4CmR1cmF0aW9uczEKMXMyCmlkcjAK
+2018-05-07 15:52:37,492 (7f47faffd700) :  DEBUG (runtime:814) - Found route matching /:/plugins/com.plexapp.agents.imdb/messaging/function/X0FnZW50S2l0OlNlYXJjaA__/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoyCmRpY3QKZGljdAo2CnMyCmVuczQKbGFuZ2IwczYKbWFudWFsYjFzNwpwcmltYXJ5aTAKczcKdmVyc2lvbnIxCnM2Cmt3YXJnc3M1Ck1vdmllczEwCm1lZGlhX3R5cGU2CnMxNgphOTU3NTBiNGQ5ODZiZGYzczE3Cm9wZW5TdWJ0aXRsZXNIYXNoczYKTW92aWVzczQKbmFtZXMxMTkKJTJGZGF0YSUyRmZpbGVzJTJGTW92aWVzJTJGNyUyMGpvdXJzJTIwZGUlMjB2b3lhZ2UlMjBzYW5zJTIwYXJnZW50JTIwZW4lMjBFdXJvcGUlMjAobWVyY3JlZGklMjAxOEgwMCktNDRmSVk0VkpJTm8lMkVta3ZzOApmaWxlbmFtZXM0MAo1NTdjYzVjMmFhNDZlYmM1Y2UzM2FmNmUxNTlhMDA3ZGYxMWE2N2UxczgKcGxleEhhc2hzMgotMXM4CmR1cmF0aW9uczEKMXMyCmlkcjAK
+2018-05-07 15:52:37,492 (7f47faffd700) :  INFO (agentkit:957) - Searching for matches for {'openSubtitlesHash': 'a95750b4d986bdf3', 'name': 'Movies', 'filename': '%2Fdata%2Ffiles%2FMovies%2F7%20jours%20de%20voyage%20sans%20argent%20en%20Europe%20(mercredi%2018H00)-44fIY4VJINo%2Emkv', 'plexHash': '557cc5c2aa46ebc5ce33af6e159a007df11a67e1', 'duration': '-1', 'id': '1'}
+2018-05-07 15:52:37,493 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/library/metadata/1/tree'
+2018-05-07 15:52:37,497 (7f47faffd700) :  INFO (__init__:152) - checking hash search vector: https://meta.plex.tv/movie/hash/55/557cc5c2aa46ebc5ce33af6e159a007df11a67e1.xml
+2018-05-07 15:52:37,498 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'https://meta.plex.tv/movie/hash/55/557cc5c2aa46ebc5ce33af6e159a007df11a67e1.xml'
+2018-05-07 15:52:37,799 (7f47faffd700) :  ERROR (networking:219) - Error opening URL 'https://meta.plex.tv/movie/hash/55/557cc5c2aa46ebc5ce33af6e159a007df11a67e1.xml'
+2018-05-07 15:52:37,800 (7f47faffd700) :  INFO (__init__:179) - freebase/proxy hash lookup failed: HTTP Error 404: Not Found
+2018-05-07 15:52:37,801 (7f47faffd700) :  INFO (__init__:183) - Scoring {}
+2018-05-07 15:52:37,803 (7f47faffd700) :  INFO (__init__:454) - ---- HASH RESULTS MAP ----
+2018-05-07 15:52:37,804 (7f47faffd700) :  INFO (__init__:455) - {}
+2018-05-07 15:52:37,807 (7f47faffd700) :  INFO (__init__:152) - checking title/year search vector: https://meta.plex.tv/movie/guid/98/98311619b6f9069ec930f46c34002caae4afa74e.xml
+2018-05-07 15:52:37,808 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'https://meta.plex.tv/movie/guid/98/98311619b6f9069ec930f46c34002caae4afa74e.xml'
+2018-05-07 15:52:37,984 (7f47faffd700) :  INFO (__init__:183) - Scoring {'tt1119646': [0, u'Movies', u'0', 7, 5871, 0], 'tt0110357': [0, u'Movies', u'0', 25, 20812, 0], 'tt1333125': [0, u'Movies', u'0', 1, 1351, 0], 'tt0499549': [0, u'Movies', u'0', 5, 4750, 0], 'tt1099212': [0, u'Movies', u'0', 7, 5838, 0], 'tt0175142': [0, u'Movies', u'0', 1, 1603, 0], 'tt1408101': [0, u'Movies', u'0', 1, 1238, 0], 'tt0462538': [0, u'Movies', u'0', 4, 3643, 0], 'tt0078346': [0, u'Movies', u'0', 1, 1054, 0], 'tt1490017': [0, u'Movies', u'0', 12, 10063, 0], 'tt1595842': [0, u'Movies', u'0', 6, 5696, 0], 'tt0317219': [0, u'Movies', u'0', 1, 1522, 0], 'tt0119282': [0, u'Movies', u'0', 1, 966, 0]}
+2018-05-07 15:52:37,985 (7f47faffd700) :  INFO (__init__:486) - ---- TITLE_YEAR RESULTS MAP ----
+2018-05-07 15:52:37,985 (7f47faffd700) :  INFO (__init__:487) - {'tt1119646': [0, u'Movies', u'0', 7, 5871, 81], 'tt0110357': [0, u'Movies', u'0', 25, 20812, 85], 'tt1333125': [0, u'Movies', u'0', 1, 1351, 80], 'tt0499549': [0, u'Movies', u'0', 5, 4750, 81], 'tt1099212': [0, u'Movies', u'0', 7, 5838, 81], 'tt0175142': [0, u'Movies', u'0', 1, 1603, 80], 'tt1408101': [0, u'Movies', u'0', 1, 1238, 80], 'tt0462538': [0, u'Movies', u'0', 4, 3643, 80], 'tt0078346': [0, u'Movies', u'0', 1, 1054, 80], 'tt1490017': [0, u'Movies', u'0', 12, 10063, 82], 'tt1595842': [0, u'Movies', u'0', 6, 5696, 81], 'tt0317219': [0, u'Movies', u'0', 1, 1522, 80], 'tt0119282': [0, u'Movies', u'0', 1, 966, 80]}
+2018-05-07 15:52:37,986 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=7
+2018-05-07 15:52:37,986 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=25
+2018-05-07 15:52:37,987 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=1
+2018-05-07 15:52:37,987 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=5
+2018-05-07 15:52:37,987 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=7
+2018-05-07 15:52:37,988 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=1
+2018-05-07 15:52:37,988 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=1
+2018-05-07 15:52:37,988 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=4
+2018-05-07 15:52:37,989 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=1
+2018-05-07 15:52:37,989 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=12
+2018-05-07 15:52:37,989 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=6
+2018-05-07 15:52:37,989 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=1
+2018-05-07 15:52:37,990 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=1
+2018-05-07 15:52:37,990 (7f47faffd700) :  INFO (__init__:512) - ---- TMDb RESULTS MAP ----
+2018-05-07 15:52:37,991 (7f47faffd700) :  DEBUG (preferences:258) - Loaded preferences from DefaultPrefs.json
+2018-05-07 15:52:37,992 (7f47faffd700) :  DEBUG (preferences:178) - Loaded the user preferences for com.plexapp.agents.imdb
+2018-05-07 15:52:37,994 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/services/tmdb?uri=%2Fsearch%2Fmovie%3Fquery%3DMovies%26year%3D%26language%3Den%26include_adult%3Dfalse'
+2018-05-07 15:52:42,354 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgo0NzQzOTVzNwp0bWRiX2lkcjAK'
+2018-05-07 15:52:46,064 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=68, year=2018, id='tt7424200', name='Teen Titans Go! To the Movies')
+2018-05-07 15:52:46,065 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgozMjQ1NThzNwp0bWRiX2lkcjAK'
+2018-05-07 15:52:48,647 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=48, year=2015, id='tt4461838', name='X-Rated: The Greatest Adult Movies of All-Time')
+2018-05-07 15:52:48,648 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgoyMTE2OTdzNwp0bWRiX2lkcjAK'
+2018-05-07 15:52:50,842 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=65, year=2012, id='tt2107682', name='Dad Made Dirty Movies')
+2018-05-07 15:52:50,844 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgoyMTQ3NThzNwp0bWRiX2lkcjAK'
+2018-05-07 15:52:53,075 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=62, year=2014, id='tt2419986', name='Easy Sex, Sad Movies')
+2018-05-07 15:52:53,076 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNQo2ODk5NnM3CnRtZGJfaWRyMAo_'
+2018-05-07 15:53:13,113 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgozNjU1OTJzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:15,462 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNQozNjg4M3M3CnRtZGJfaWRyMAo_'
+2018-05-07 15:53:17,731 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=17, year=2006, id='tt0457414', name='Midnight Movies: From the Margin to the Mainstream')
+2018-05-07 15:53:17,732 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgo0NzQyMzdzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:19,914 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=50, year=2017, id='tt6949640', name='Home Movies')
+2018-05-07 15:53:19,915 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNQo4MTQ0MnM3CnRtZGJfaWRyMAo_'
+2018-05-07 15:53:22,097 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=40, year=2000, id='tt0160403', name='The Independent')
+2018-05-07 15:53:22,099 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgo0OTYzMDZzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:24,323 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgozMjI1MjVzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:26,711 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=35, year=2017, id='tt4214198', name='Laddie')
+2018-05-07 15:53:26,712 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgoyMzUwNTBzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:29,183 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=27, year=2013, id='tt1942929', name='Italian Movies')
+2018-05-07 15:53:29,185 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgo0ODYyNjZzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:31,464 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=15, year=2018, id='tt6908760', name='Tonight, At the Movies')
+2018-05-07 15:53:31,465 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgoyMzQ2NTJzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:34,035 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=9, year=2012, id='tt2430084', name='I Heart Monster Movies')
+2018-05-07 15:53:34,036 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNAo2OTg0czcKdG1kYl9pZHIwCg__'
+2018-05-07 15:53:36,455 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=15, year=1980, id='tt0079302', name='Home Movies')
+2018-05-07 15:53:36,457 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgozNDUyMDFzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:38,732 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNQo4NjY3MXM3CnRtZGJfaWRyMAo_'
+2018-05-07 15:53:40,975 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=5, year=1988, id='tt0094769', name='Blue Movies')
+2018-05-07 15:53:40,979 (7f47faffd700) :  INFO (__init__:516) - ---- UMP RESULTS MAP ----
+2018-05-07 15:53:40,985 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/services/ump/matches?type=1&title=Movies&year=&plexHash=557cc5c2aa46ebc5ce33af6e159a007df11a67e1&lang=en&manual=0'
+2018-05-07 15:53:48,580 (7f47faffd700) :  ERROR (networking:219) - Error opening URL 'http://127.0.0.1:32400/services/ump/matches?type=1&title=Movies&year=&plexHash=557cc5c2aa46ebc5ce33af6e159a007df11a67e1&lang=en&manual=0'
+2018-05-07 15:53:48,580 (7f47faffd700) :  INFO (__init__:518) - Unable to get any results from UMP for Movies, no worries...
+2018-05-07 15:53:48,582 (7f47faffd700) :  DEBUG (runtime:88) - Sending packed state data (580 bytes)
+2018-05-07 15:53:48,583 (7f47faffd700) :  DEBUG (runtime:924) - Response: [200] str, 4652 bytes
+2018-05-07 15:53:48,645 (7f47faffd700) :  DEBUG (runtime:717) - Handling request GET /:/plugins/com.plexapp.agents.imdb/messaging/function/X0FnZW50S2l0OlNlYXJjaA__/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoyCmRpY3QKZGljdAo2CnMyCmVuczQKbGFuZ2IwczYKbWFudWFsYjFzNwpwcmltYXJ5aTAKczcKdmVyc2lvbnIxCnM2Cmt3YXJnc3M1Ck1vdmllczEwCm1lZGlhX3R5cGU2CnMxNgphOTU3NTBiNGQ5ODZiZGYzczE3Cm9wZW5TdWJ0aXRsZXNIYXNoczYKTW92aWVzczQKbmFtZXMxMTkKJTJGZGF0YSUyRmZpbGVzJTJGTW92aWVzJTJGNyUyMGpvdXJzJTIwZGUlMjB2b3lhZ2UlMjBzYW5zJTIwYXJnZW50JTIwZW4lMjBFdXJvcGUlMjAobWVyY3JlZGklMjAxOEgwMCktNDRmSVk0VkpJTm8lMkVta3ZzOApmaWxlbmFtZXM0MAo1NTdjYzVjMmFhNDZlYmM1Y2UzM2FmNmUxNTlhMDA3ZGYxMWE2N2UxczgKcGxleEhhc2hzNQo1MzgyMXM4CmR1cmF0aW9uczEKMXMyCmlkcjAK
+2018-05-07 15:53:48,646 (7f47faffd700) :  DEBUG (runtime:49) - Received packed state data (556 bytes)
+2018-05-07 15:53:48,648 (7f47faffd700) :  DEBUG (runtime:814) - Found route matching /:/plugins/com.plexapp.agents.imdb/messaging/function/X0FnZW50S2l0OlNlYXJjaA__/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoyCmRpY3QKZGljdAo2CnMyCmVuczQKbGFuZ2IwczYKbWFudWFsYjFzNwpwcmltYXJ5aTAKczcKdmVyc2lvbnIxCnM2Cmt3YXJnc3M1Ck1vdmllczEwCm1lZGlhX3R5cGU2CnMxNgphOTU3NTBiNGQ5ODZiZGYzczE3Cm9wZW5TdWJ0aXRsZXNIYXNoczYKTW92aWVzczQKbmFtZXMxMTkKJTJGZGF0YSUyRmZpbGVzJTJGTW92aWVzJTJGNyUyMGpvdXJzJTIwZGUlMjB2b3lhZ2UlMjBzYW5zJTIwYXJnZW50JTIwZW4lMjBFdXJvcGUlMjAobWVyY3JlZGklMjAxOEgwMCktNDRmSVk0VkpJTm8lMkVta3ZzOApmaWxlbmFtZXM0MAo1NTdjYzVjMmFhNDZlYmM1Y2UzM2FmNmUxNTlhMDA3ZGYxMWE2N2UxczgKcGxleEhhc2hzNQo1MzgyMXM4CmR1cmF0aW9uczEKMXMyCmlkcjAK
+2018-05-07 15:53:48,649 (7f47faffd700) :  INFO (agentkit:957) - Searching for matches for {'openSubtitlesHash': 'a95750b4d986bdf3', 'name': 'Movies', 'filename': '%2Fdata%2Ffiles%2FMovies%2F7%20jours%20de%20voyage%20sans%20argent%20en%20Europe%20(mercredi%2018H00)-44fIY4VJINo%2Emkv', 'plexHash': '557cc5c2aa46ebc5ce33af6e159a007df11a67e1', 'duration': '53821', 'id': '1'}
+2018-05-07 15:53:48,650 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/library/metadata/1/tree'
+2018-05-07 15:53:48,657 (7f47faffd700) :  INFO (__init__:152) - checking hash search vector: https://meta.plex.tv/movie/hash/55/557cc5c2aa46ebc5ce33af6e159a007df11a67e1.xml
+2018-05-07 15:53:48,658 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'https://meta.plex.tv/movie/hash/55/557cc5c2aa46ebc5ce33af6e159a007df11a67e1.xml'
+2018-05-07 15:53:48,906 (7f47faffd700) :  ERROR (networking:219) - Error opening URL 'https://meta.plex.tv/movie/hash/55/557cc5c2aa46ebc5ce33af6e159a007df11a67e1.xml'
+2018-05-07 15:53:48,907 (7f47faffd700) :  INFO (__init__:179) - freebase/proxy hash lookup failed: HTTP Error 404: Not Found
+2018-05-07 15:53:48,907 (7f47faffd700) :  INFO (__init__:183) - Scoring {}
+2018-05-07 15:53:48,908 (7f47faffd700) :  INFO (__init__:454) - ---- HASH RESULTS MAP ----
+2018-05-07 15:53:48,908 (7f47faffd700) :  INFO (__init__:455) - {}
+2018-05-07 15:53:48,908 (7f47faffd700) :  INFO (__init__:152) - checking title/year search vector: https://meta.plex.tv/movie/guid/98/98311619b6f9069ec930f46c34002caae4afa74e.xml
+2018-05-07 15:53:48,910 (7f47faffd700) :  DEBUG (networking:161) - Fetching 'https://meta.plex.tv/movie/guid/98/98311619b6f9069ec930f46c34002caae4afa74e.xml' from the HTTP cache
+2018-05-07 15:53:48,913 (7f47faffd700) :  INFO (__init__:183) - Scoring {'tt1119646': [0, u'Movies', u'0', 7, 5871, 0], 'tt0110357': [0, u'Movies', u'0', 25, 20812, 0], 'tt1333125': [0, u'Movies', u'0', 1, 1351, 0], 'tt0499549': [0, u'Movies', u'0', 5, 4750, 0], 'tt1099212': [0, u'Movies', u'0', 7, 5838, 0], 'tt0175142': [0, u'Movies', u'0', 1, 1603, 0], 'tt1408101': [0, u'Movies', u'0', 1, 1238, 0], 'tt0462538': [0, u'Movies', u'0', 4, 3643, 0], 'tt0078346': [0, u'Movies', u'0', 1, 1054, 0], 'tt1490017': [0, u'Movies', u'0', 12, 10063, 0], 'tt1595842': [0, u'Movies', u'0', 6, 5696, 0], 'tt0317219': [0, u'Movies', u'0', 1, 1522, 0], 'tt0119282': [0, u'Movies', u'0', 1, 966, 0]}
+2018-05-07 15:53:48,913 (7f47faffd700) :  INFO (__init__:486) - ---- TITLE_YEAR RESULTS MAP ----
+2018-05-07 15:53:48,913 (7f47faffd700) :  INFO (__init__:487) - {'tt1119646': [0, u'Movies', u'0', 7, 5871, 81], 'tt0110357': [0, u'Movies', u'0', 25, 20812, 85], 'tt1333125': [0, u'Movies', u'0', 1, 1351, 80], 'tt0499549': [0, u'Movies', u'0', 5, 4750, 81], 'tt1099212': [0, u'Movies', u'0', 7, 5838, 81], 'tt0175142': [0, u'Movies', u'0', 1, 1603, 80], 'tt1408101': [0, u'Movies', u'0', 1, 1238, 80], 'tt0462538': [0, u'Movies', u'0', 4, 3643, 80], 'tt0078346': [0, u'Movies', u'0', 1, 1054, 80], 'tt1490017': [0, u'Movies', u'0', 12, 10063, 82], 'tt1595842': [0, u'Movies', u'0', 6, 5696, 81], 'tt0317219': [0, u'Movies', u'0', 1, 1522, 80], 'tt0119282': [0, u'Movies', u'0', 1, 966, 80]}
+2018-05-07 15:53:48,913 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=7
+2018-05-07 15:53:48,914 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=25
+2018-05-07 15:53:48,914 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=1
+2018-05-07 15:53:48,914 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=5
+2018-05-07 15:53:48,914 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=7
+2018-05-07 15:53:48,914 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=1
+2018-05-07 15:53:48,914 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=1
+2018-05-07 15:53:48,914 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=4
+2018-05-07 15:53:48,915 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=1
+2018-05-07 15:53:48,915 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=12
+2018-05-07 15:53:48,915 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=6
+2018-05-07 15:53:48,915 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=1
+2018-05-07 15:53:48,915 (7f47faffd700) :  INFO (__init__:501) - Skipping title/year match (doesn't meet percentage threshold): Movies (0) percentage=1
+2018-05-07 15:53:48,915 (7f47faffd700) :  INFO (__init__:512) - ---- TMDb RESULTS MAP ----
+2018-05-07 15:53:48,917 (7f47faffd700) :  DEBUG (networking:161) - Fetching 'http://127.0.0.1:32400/services/tmdb?uri=%2Fsearch%2Fmovie%3Fquery%3DMovies%26year%3D%26language%3Den%26include_adult%3Dfalse' from the HTTP cache
+2018-05-07 15:53:48,918 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgo0NzQzOTVzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:48,931 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=68, year=2018, id='tt7424200', name='Teen Titans Go! To the Movies')
+2018-05-07 15:53:48,932 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgozMjQ1NThzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:48,944 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=48, year=2015, id='tt4461838', name='X-Rated: The Greatest Adult Movies of All-Time')
+2018-05-07 15:53:48,945 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgoyMTE2OTdzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:48,958 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=65, year=2012, id='tt2107682', name='Dad Made Dirty Movies')
+2018-05-07 15:53:48,959 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgoyMTQ3NThzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:48,968 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=62, year=2014, id='tt2419986', name='Easy Sex, Sad Movies')
+2018-05-07 15:53:48,969 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNQo2ODk5NnM3CnRtZGJfaWRyMAo_'
+2018-05-07 15:53:51,159 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=45, year=2002, id='tt0324355', name='Ultimate Fights from the Movies')
+2018-05-07 15:53:51,159 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgozNjU1OTJzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:51,169 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNQozNjg4M3M3CnRtZGJfaWRyMAo_'
+2018-05-07 15:53:51,179 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=17, year=2006, id='tt0457414', name='Midnight Movies: From the Margin to the Mainstream')
+2018-05-07 15:53:51,180 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgo0NzQyMzdzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:51,188 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=50, year=2017, id='tt6949640', name='Home Movies')
+2018-05-07 15:53:51,189 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNQo4MTQ0MnM3CnRtZGJfaWRyMAo_'
+2018-05-07 15:53:51,197 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=40, year=2000, id='tt0160403', name='The Independent')
+2018-05-07 15:53:51,197 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgo0OTYzMDZzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:51,206 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgozMjI1MjVzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:51,214 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=35, year=2017, id='tt4214198', name='Laddie')
+2018-05-07 15:53:51,214 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgoyMzUwNTBzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:51,223 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=27, year=2013, id='tt1942929', name='Italian Movies')
+2018-05-07 15:53:51,224 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgo0ODYyNjZzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:51,231 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=15, year=2018, id='tt6908760', name='Tonight, At the Movies')
+2018-05-07 15:53:51,232 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgoyMzQ2NTJzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:51,240 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=9, year=2012, id='tt2430084', name='I Heart Monster Movies')
+2018-05-07 15:53:51,240 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNAo2OTg0czcKdG1kYl9pZHIwCg__'
+2018-05-07 15:53:51,249 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=15, year=1980, id='tt0079302', name='Home Movies')
+2018-05-07 15:53:51,249 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNgozNDUyMDFzNwp0bWRiX2lkcjAK'
+2018-05-07 15:53:51,257 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.agents.themoviedb/messaging/function/TWVzc2FnZUtpdDpHZXRJbWRiSWQ_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMQpzNQo4NjY3MXM3CnRtZGJfaWRyMAo_'
+2018-05-07 15:53:51,265 (7f47faffd700) :  INFO (__init__:306) - MetadataSearchResult(lang='en', thumb=None, score=5, year=1988, id='tt0094769', name='Blue Movies')
+2018-05-07 15:53:51,266 (7f47faffd700) :  INFO (__init__:516) - ---- UMP RESULTS MAP ----
+2018-05-07 15:53:51,267 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/services/ump/matches?type=1&title=Movies&year=&plexHash=557cc5c2aa46ebc5ce33af6e159a007df11a67e1&lang=en&manual=0'
+2018-05-07 15:53:57,605 (7f47faffd700) :  INFO (__init__:341) - MetadataSearchResult(lang='en', thumb=None, score=96, year=1925, id='tt0016129', name='The Movies')
+2018-05-07 15:53:57,605 (7f47faffd700) :  INFO (__init__:341) - MetadataSearchResult(lang='en', thumb='https://image.tmdb.org/t/p/w154/bKPtXn9n4M4s8vvZrbw40mYsefB.jpg', score=83, year=1994, id='tt0110357', name='The Lion King')
+2018-05-07 15:53:57,609 (7f47faffd700) :  DEBUG (runtime:88) - Sending packed state data (580 bytes)
+2018-05-07 15:53:57,609 (7f47faffd700) :  DEBUG (runtime:924) - Response: [200] str, 5728 bytes
+2018-05-07 15:53:57,666 (7f47faffd700) :  DEBUG (runtime:717) - Handling request GET /:/plugins/com.plexapp.agents.imdb/messaging/function/X0FnZW50S2l0OlVwZGF0ZU1ldGFkYXRh/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMTAKczIKZW5zNApsYW5nYjFzNQpmb3JjZWIwczgKcGVyaW9kaWNzMQoxczQKZGJpZGkwCnM3CnZlcnNpb25uczEwCnBhcmVudEdVSURuczgKcGFyZW50SURzNQpNb3ZpZXMxMAptZWRpYV90eXBlczQzCmNvbS5wbGV4YXBwLmFnZW50cy5pbWRiOi8vdHQwMDE2MTI5P2xhbmc9ZW5zNApndWlkczkKdHQwMDE2MTI5czIKaWRyMAo_
+2018-05-07 15:53:57,668 (7f47faffd700) :  DEBUG (runtime:814) - Found route matching /:/plugins/com.plexapp.agents.imdb/messaging/function/X0FnZW50S2l0OlVwZGF0ZU1ldGFkYXRh/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMTAKczIKZW5zNApsYW5nYjFzNQpmb3JjZWIwczgKcGVyaW9kaWNzMQoxczQKZGJpZGkwCnM3CnZlcnNpb25uczEwCnBhcmVudEdVSURuczgKcGFyZW50SURzNQpNb3ZpZXMxMAptZWRpYV90eXBlczQzCmNvbS5wbGV4YXBwLmFnZW50cy5pbWRiOi8vdHQwMDE2MTI5P2xhbmc9ZW5zNApndWlkczkKdHQwMDE2MTI5czIKaWRyMAo_
+2018-05-07 15:53:57,669 (7f47faffd700) :  DEBUG (model:32) - Loading model with GUID com.plexapp.agents.imdb://tt0016129?lang=en
+2018-05-07 15:53:57,671 (7f47faffd700) :  ERROR (model:205) - Cannot read model from /config/Library/Application Support/Plex Media Server/Metadata/Movies/4/66200d76bcf9818ace7b9b75b4758c5a04fc8a0.bundle/Contents/com.plexapp.agents.imdb
+2018-05-07 15:53:57,671 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/library/metadata/1/tree'
+2018-05-07 15:53:57,678 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/services/tmdb?uri=%2Fconfiguration'
+2018-05-07 15:53:59,940 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/services/tmdb?uri=%2Fmovie%2Ftt0016129%3Fappend_to_response%3Dreleases%2Ccredits%26language%3Den'
+2018-05-07 15:54:13,974 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/services/tmdb?uri=%2Fmovie%2Ftt0016129%2Fimages'
+2018-05-07 15:54:16,852 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/services/tmdb?uri=%2Fmovie%2F101858%2Frecommendations'
+2018-05-07 15:54:19,580 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'https://meta.plex.tv/m/0016129?lang=en&ratings=1&reviews=1&extras=1'
+2018-05-07 15:54:20,644 (7f47faffd700) :  ERROR (networking:219) - Error opening URL 'https://meta.plex.tv/m/0016129?lang=en&ratings=1&reviews=1&extras=1'
+2018-05-07 15:54:20,645 (7f47faffd700) :  INFO (__init__:702) - Plex_Movie_FAILED - Error obtaining Plex movie data for 0016129: HTTP Error 404: Not Found
+2018-05-07 15:54:20,647 (7f47faffd700) :  INFO (__init__:833) - Error obtaining extras for 0016129: 'NoneType' object has no attribute 'xpath'
+2018-05-07 15:54:20,648 (7f47faffd700) :  INFO (__init__:894) - Error obtaining Rotten tomato data for 0016129: 'NoneType' object has no attribute 'xpath'
+2018-05-07 15:54:20,655 (7f47faffd700) :  DEBUG (networking:166) - Requesting 'https://chapterdb.plex.tv/chapters/search?title=The%20Movies'
+2018-05-07 15:54:21,240 (7f47faffd700) :  DEBUG (chapterdb:197) - Added 0 chapters.
+2018-05-07 15:54:21,243 (7f47faffd700) :  DEBUG (model:229) - Serializing to /config/Library/Application Support/Plex Media Server/Metadata/Movies/4/66200d76bcf9818ace7b9b75b4758c5a04fc8a0.bundle/Contents/com.plexapp.agents.imdb/Info.xml
+2018-05-07 15:54:21,244 (7f47faffd700) :  DEBUG (runtime:88) - Sending packed state data (580 bytes)
+2018-05-07 15:54:21,244 (7f47faffd700) :  DEBUG (runtime:924) - Response: [200] str, 16 bytes

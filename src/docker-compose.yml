@@ -14,7 +14,7 @@ services:
         image: plexinc/pms-docker
         volumes:
             - ../volumes/plex/config:/config
-            - ../volumes/common/data:/data/
+            - ../volumes/common/movies:/data/
         network_mode: "host"
         restart: always
         environment:
@@ -28,15 +28,16 @@ services:
         volumes:
             - ../volumes/owncloud/apps:/var/www/html/apps
             - ../volumes/owncloud/config:/var/www/html/config
-            - ../volumes/common/data:/var/www/html/data
+            - ../volumes/owncloud/data:/var/www/html/data
+            - ../volumes/common/movies:/var/www/html/data/plex
     mysql:
         container_name: owncloud_db
         image: mariadb
         restart: always
         environment:
-            MYSQL_ROOT_PASSWORD: xxxxxxxx
+            MYSQL_ROOT_PASSWORD: ertyuiop
             MYSQL_USER: owncloud
-            MYSQL_PASSWORD: xxxxxxxx
+            MYSQL_PASSWORD: ertyuiop
             MYSQL_DATABASE: owncloud
         volumes:
             - ../volumes/mysql:/var/lib/mysql
