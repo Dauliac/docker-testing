@@ -35,9 +35,9 @@ services:
         image: mariadb
         restart: always
         environment:
-            MYSQL_ROOT_PASSWORD: ertyuiop
-            MYSQL_USER: owncloud
-            MYSQL_PASSWORD: ertyuiop
-            MYSQL_DATABASE: owncloud
+            MYSQL_ROOT_PASSWORD: $DB_ROOT_PASSWORD
+            MYSQL_USER: $DB_USER
+            MYSQL_PASSWORD: $DB_PASSWORD
+            MYSQL_DATABASE: $DB
         volumes:
             - ../volumes/mysql:/var/lib/mysql
