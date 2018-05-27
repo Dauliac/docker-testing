@@ -9,35 +9,75 @@ services:
             - ../volumes/portainer:/data
         network_mode: "host"
         restart: always
+        deploy:
+            resources:
+                limits:
+                    cpus: '0.001'
+                    memory: 256M
+                reservations:
+                    cpus: '0.0001'
+                    memory: 125M
     plex:
         container_name: plex
+        env_file:
+            - plex.env
         image: plexinc/pms-docker
         volumes:
             - ../volumes/plex/config:/config
             - ../volumes/common/movies:/data/
         network_mode: "host"
         restart: always
-        environment:
-            ADVERTISE_IP: "http://192.168.1.84:32400/"
+        deploy:
+            resources:
+                limits:
+                    cpus: '0.001'
+                    memory: 256M
+                reservations:
+                    cpus: '0.0001'
+                    memory: 125M
     owncloud:
         container_name: owncloud
         image: owncloud
         restart: always
         ports:
             - "8080:80"
+        depends_on:
+            - mariadb
         volumes:
             - ../volumes/owncloud/apps:/var/www/html/apps
             - ../volumes/owncloud/config:/var/www/html/config
             - ../volumes/owncloud/data:/var/www/html/data
             - ../volumes/common/movies:/var/www/html/data/plex
-    mysql:
+        deploy:
+            resources:
+                limits:
+                    cpus: '0.001'
+                    memory: 256M
+                reservations:
+                    cpus: '0.0001'
+                    memory: 125M
+    mariadb:
         container_name: owncloud_db
+        env_file:
+            - mariadb.env
         image: mariadb
         restart: always
-        environment:
-            MYSQL_ROOT_PASSWORD: $DB_ROOT_PASSWORD
-            MYSQL_USER: $DB_USER
-            MYSQL_PASSWORD: $DB_PASSWORD
-            MYSQL_DATABASE: $DB
+        ports:
+            - "3306:3306"
         volumes:
             - ../volumes/mysql:/var/lib/mysql
+        deploy:
+            resources:
+                limits:
+                    cpus: '0.001'
+                    memory: 256M
+                reservations:
+                    cpus: '0.0001'
+                    memory: 125M
+    # minecraft:
+    #     container_name: minecraft
+    #     restart: always
+    #     ports:
+    #         - "25665:25665"
+    #     volumes:
+    #         - ../volumes/common/minecraft:/app

@@ -1,5 +1,5 @@
 # docker-testing
-A courses container deployment project.
+A casual container deployment project.
 
 ##Ideas
 * [x] [minecraft](https://hub.docker.com/r/itzg/minecraft-server/)
@@ -7,42 +7,52 @@ A courses container deployment project.
 * [x] [video server](https://github.com/plexinc/plex-media-player)
 * [x] [music server](https://github.com/soundscapecloud/soundscape)
 * [x] [monitoring](https://github.com/kevana/ui-for-docker)
-* [ ] owncloud-suit
-* [ ] password manager
+* [x] owncloud-suit
+* [x] minecraft web pannel
+* [x] swarm
+* [x] host config
 * [ ] email TMA
-* [ ] swarm
+* [ ] backup
+* [ ] proxy ?
+* [ ] docker store
 
 ## Todo-list
-* [ ] SSL
-* [ ] DNS
+* [x] docker-compose
+* [x] project structure
+* [x] images interraction
+* [ ] services ##edsez##
 * [ ] Minecraft dockerFile
 * [ ] check file perms
 * [ ] docker machine
-* [ ] network security : 
-  * [ ] firewall
+* [ ] docker volumes vs bind mounts
+* [ ] monitoring
+* [ ] host
+
 
 ## Install / Logs
 
 ### Plex
 - create your plex account with website
 - user /data folder as movie folder to share movies throw Owncloud.
+`location: src/`
 
 ### Owncloud
 * root
-	**a simple admin**
+    **a simple admin**
     user: root
     password: ertyuiop
 * plex
-	**The plex media center user**
-	user: plex
-	password: ertyuiop
+    **The plex media center user**
+    user: plex
+    password: ertyuiop
 * user
-	**a basic user**
-	user: user1
-	password: ertyuiop
+    **a basic user**
+    user: user1
+    password: ertyuiop
 
 ### Portainer
 * root
-	**a simple admin**
-	user: root
-	password: ertyuiop
+    **a simple admin**
+    user: root
+    password: ertyuiop
+### 
