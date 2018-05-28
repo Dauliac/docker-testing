@@ -56,8 +56,10 @@ services:
                 reservations:
                     cpus: '0.0001'
                     memory: 125M
+        networks:
+            - monitoring
     mariadb:
-        container_name: owncloud_db
+        container_name: mariadb
         env_file:
             - mariadb.env
         image: mariadb
@@ -66,6 +68,7 @@ services:
             - "3306:3306"
         volumes:
             - owncloud-data:/var/lib/mysql
+            - ./mariadb:/docker-entrypoint-initdb.d
         deploy:
             resources:
                 limits:
@@ -74,6 +77,8 @@ services:
                 reservations:
                     cpus: '0.0001'
                     memory: 125M
+        networks:
+            - monitoring
     cadvisor:
         image: google/cadvisor
         container_name: cadvisor
@@ -91,6 +96,8 @@ services:
     prometheus:
         image: prom/prometheus:v2.0.0
         container_name: prometheus
+        depends_on:
+            - cadvisor
         volumes:
             - ./prometheus:/etc/prometheus/
             - prometheus-data:/prometheus
@@ -111,8 +118,11 @@ services:
         container_name: grafana
         env_file:
             - grafana.env
+        depends_on:
+            - prometheus
         volumes:
             - grafana-data:/var/lib/grafana
+            - ./grafana:/etc/grafana/provisioning
         expose:
             - 3000
         ports:
@@ -126,7 +136,6 @@ services:
         #     - "25665:25665"
         # volumes:
         #     - ../volumes/common/minecraft:/app
-        #
 
 networks:
     monitoring:
