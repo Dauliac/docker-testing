@@ -3,10 +3,10 @@ services:
     portainer:
         container_name: portainer
         image: portainer/portainer
-        command: -H unix:///var/run/docker.sock
+        command: --admin-password '$$2y$$05$$EGWtI1m7uYTLwX6d0o.RH.LD1mNlP6ysG2yXCYZlrk0gJ4442mYNO' -H unix:///var/run/docker.sock
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
-            - ../volumes/portainer:/data
+            - portainer-data:/data
         network_mode: "host"
         restart: always
         deploy:
@@ -40,7 +40,7 @@ services:
         image: owncloud
         restart: always
         ports:
-            - "8080:80"
+            - "8881:80"
         depends_on:
             - mariadb
         volumes:
@@ -65,7 +65,7 @@ services:
         ports:
             - "3306:3306"
         volumes:
-            - ../volumes/mysql:/var/lib/mysql
+            - owncloud-data:/var/lib/mysql
         deploy:
             resources:
                 limits:
@@ -85,36 +85,54 @@ services:
         expose:
             - 8080
         ports:
-            - "8005:8080"
+            - "8080:8080"
+        networks:
+              - monitoring
     prometheus:
         image: prom/prometheus:v2.0.0
         container_name: prometheus
         volumes:
-            - ../volumes/prometheus:/etc/prometheus/
-            - ../volumes/ prometheus-data:/prometheus
+            - ./prometheus:/etc/prometheus/
+            - prometheus-data:/prometheus
         command:
             - '--config.file=/etc/prometheus/prometheus.yml'
             - '--storage.tsdb.path=/prometheus'
-            - '--web.console.libraries=/etc/prometheus/console_libraries'
+            - '--web.console.libraries=/etc/prometgrafanaheus/console_libraries'
             - '--web.console.templates=/etc/prometheus/consoles'
             - '--storage.tsdb.retention=200h'
         expose:
             - 9090
         ports:
             - "9090:9090"
+        networks:
+            - monitoring
     grafana:
-        image: grafana/grafana:4.6.2
+        image: grafana/grafana
         container_name: grafana
+        env_file:
+            - grafana.env
         volumes:
-            - ../volumes/grafana-data:/var/lib/grafana
+            - grafana-data:/var/lib/grafana
         expose:
             - 3000
         ports:
             - "3000:3000"
-    # minecraft:
-    #     container_name: minecraft
-    #     restart: always
-    #     ports:
-    #         - "25665:25665"
-    #     volumes:
-    #         - ../volumes/common/minecraft:/app
+        networks:
+            - monitoring
+        # minecraft:
+        # container_name: minecraft
+        # restart: always
+        # ports:
+        #     - "25665:25665"
+        # volumes:
+        #     - ../volumes/common/minecraft:/app
+        #
+
+networks:
+    monitoring:
+        driver: bridge
+volumes:
+    prometheus-data: {}
+    grafana-data: {}
+    owncloud-data: {}
+    portainer-data: {}

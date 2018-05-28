@@ -56,3 +56,7 @@ A casual container deployment project.
     user: root
     password: ertyuiop
 ### 
+* admin
+    **a simple admin**
+    user: admin
+    password: ertyuiop
