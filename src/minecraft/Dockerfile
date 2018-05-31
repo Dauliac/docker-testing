@@ -21,7 +21,7 @@ RUN echo 0 > /etc/selinux/enforce \
         -O /app/mcmyadmin/mcmyadmin.zip \
     && unzip /app/mcmyadmin/mcmyadmin.zip \
     && mv /app/mcmyadmin/mcmyadmin.zip /tmp/ \
-    && ln -s /app/mcmyadmin/MCMA2_Linux_X86_64 /usr/bin/mcmyadmin
+    && ln -s /app/mcmyadmin/MCMA2_Linux_X86_64 /bin
 
 EXPOSE 25665
 EXPOSE 8080
