@@ -3,11 +3,15 @@ services:
     portainer:
         container_name: portainer
         image: portainer/portainer
+        environment:
+            - VIRTUAL_HOST=portainer.local
         command: --admin-password '$$2y$$05$$EGWtI1m7uYTLwX6d0o.RH.LD1mNlP6ysG2yXCYZlrk0gJ4442mYNO' -H unix:///var/run/docker.sock
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - portainer-data:/data
-        network_mode: "host"
+        # network_mode: "host"
+        networks:
+            - openpantoufle
         restart: always
         deploy:
             resources:
@@ -19,13 +23,17 @@ services:
                     memory: 125M
     plex:
         container_name: plex
+        environment:
+            - VIRTUAL_HOST=plex.local
         env_file:
             - plex.env
         image: plexinc/pms-docker
         volumes:
             - ../volumes/plex/config:/config
             - ../volumes/common/movies:/data/
-        network_mode: "host"
+        # network_mode: "host"
+        networks:
+            - openpantoufle
         restart: always
         deploy:
             resources:
@@ -38,6 +46,8 @@ services:
     owncloud:
         container_name: owncloud
         image: owncloud
+        environment:
+            - VIRTUAL_HOST=owncloud.local
         restart: always
         ports:
             - "8881:80"
@@ -57,9 +67,11 @@ services:
                     cpus: '0.0001'
                     memory: 125M
         networks:
-            - monitoring
+            - openpantoufle
     mariadb:
         container_name: mariadb
+        environment:
+            - VIRTUAL_HOST=mariadb.local
         env_file:
             - mariadb.env
         image: mariadb
@@ -78,7 +90,7 @@ services:
                     cpus: '0.0001'
                     memory: 125M
         networks:
-            - monitoring
+            - openpantoufle
     cadvisor:
         image: google/cadvisor
         container_name: cadvisor
@@ -92,12 +104,12 @@ services:
         ports:
             - "8080:8080"
         networks:
-              - monitoring
+              - openpantoufle
     prometheus:
         image: prom/prometheus:v2.0.0
         container_name: prometheus
         depends_on:
-             cadvisor
+            - cadvisor
         volumes:
             - ./prometheus:/etc/prometheus/
             - prometheus-data:/prometheus
@@ -112,10 +124,12 @@ services:
         ports:
             - "9090:9090"
         networks:
-            - monitoring
+            - openpantoufle
     grafana:
         image: grafana/grafana
         container_name: grafana
+        environment:
+            - VIRTUAL_HOST=grafana.local
         env_file:
             - grafana.env
         depends_on:
@@ -128,17 +142,27 @@ services:
         ports:
             - "3000:3000"
         networks:
-            - monitoring
-        # minecraft:
-        # container_name: minecraft
-        # restart: always
-        # ports:
-        #     - "25665:25665"
-        # volumes:
-        #     - ../volumes/common/minecraft:/app
+            - openpantoufle
+    # minecraft:
+    # container_name: minecraft
+    # restart: always
+    # ports:
+    #     - "25665:25665"
+    # volumes:
+    #     - ../volumes/common/minecraft:/app
+    nginx-proxy:
+        container_name: nginx-proxy
+        image: jwilder/nginx-proxy:alpine
+        ports:
+          - "80:80"
+        volumes:
+          - /var/run/docker.sock:/tmp/docker.sock:ro
+        networks:
+            - openpantoufle
+
 
 networks:
-    monitoring:
+    openpantoufle:
         driver: bridge
 volumes:
     prometheus-data: {}
