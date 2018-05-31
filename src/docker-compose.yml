@@ -9,38 +9,25 @@ services:
             - portainer-data:/data
         networks:
             - openpantoufle
+        ports:
+            - "9007:9000"
         restart: always
     plex:
         container_name: plex
-        environment:
-            - VIRTUAL_HOST=plex.e799416.online-server.cloud
-        env_file:
-            - plex.env
         image: plexinc/pms-docker
-        ports:
-            - "32400:32400/tcp"
-            - "3005:3005/tcp"
-            - "8324:8324/tcp"
-            - "32469:32469/tcp"
-            - "1900:1900/udp"
-            - "32410:32410/udp"
-            - "32412:32412/udp"
-            - "32413:32413/udp"
-            - "32414:32414/udp"
         volumes:
             - ../volumes/plex/config:/config
             - ../volumes/common/movies:/data/
-        networks:
-            - openpantoufle
+        network_mode: "host"
         restart: always
+        environment:
+            ADVERTISE_IP: "http://192.168.1.84:32400/"    
     owncloud:
         container_name: owncloud
         image: owncloud
-        environment:
-            - VIRTUAL_HOST=owncloud.e799416.online-server.cloud
         restart: always
         ports:
-            - "8881:80"
+            - "9005:80"
         depends_on:
             - mariadb
         volumes:
@@ -71,10 +58,8 @@ services:
             - /var/run:/var/run:rw
             - /sys:/sys:ro
             - /var/lib/docker/:/var/lib/docker:ro
-        expose:
-            - 8888
         ports:
-            - "8888:8888"
+            - "9004:8080"
         networks:
               - openpantoufle
     prometheus:
@@ -91,8 +76,6 @@ services:
             - '--web.console.libraries=/etc/prometgrafanaheus/console_libraries'
             - '--web.console.templates=/etc/prometheus/consoles'
             - '--storage.tsdb.retention=200h'
-        expose:
-            - 9090
         ports:
             - "9090:9090"
         networks:
@@ -120,18 +103,13 @@ services:
             dockerfile: Dockerfile
         restart: always
         ports:
-            - "25665:25665"
-            - "25080:8080"
+            - "25565:25565"
+            - "9001:8080"
         volumes:
-            - ../volumes/common/minecraft:/app
-        # services:
-        #     nginx-proxy:
-        #     image: jwilder/nginx-proxy
-        #     ports:
-        #         - "80:80"
-        #     volumes:
-        #         - /var/run/docker.sock:/tmp/docker.sock:ro
-        #
+            - ../volumes/common/minecraft:/root/Minecraft/world
+        networks:
+            - openpantoufle
+
 networks:
     openpantoufle:
         driver: bridge
