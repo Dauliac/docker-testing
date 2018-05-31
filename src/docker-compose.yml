@@ -7,10 +7,6 @@ services:
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - portainer-data:/data
-        labels:
-            - 'traefik.enable=true'
-            - 'traefik.port=9001'
-            - 'traefik.frontend.rule=Host:portainer.e799416.online-server.cloud'
         networks:
             - openpantoufle
         restart: always
@@ -21,10 +17,6 @@ services:
         env_file:
             - plex.env
         image: plexinc/pms-docker
-        labels:
-            - 'traefik.enable=true'
-            - 'traefik.port=32400'
-            - 'traefik.frontend.rule=Host:plex.e799416.online-server.cloud'
         ports:
             - "32400:32400/tcp"
             - "3005:3005/tcp"
@@ -56,14 +48,6 @@ services:
             - ../volumes/owncloud/config:/var/www/html/config
             - ../volumes/owncloud/data:/var/www/html/data
             - ../volumes/common/movies:/var/www/html/data/plex
-        deploy:
-            resources:
-                limits:
-                    cpus: '0.001'
-                    memory: 256M
-                reservations:
-                    cpus: '0.0001'
-                    memory: 125M
         networks:
             - openpantoufle
     mariadb:
@@ -77,14 +61,6 @@ services:
         volumes:
             - owncloud-data:/var/lib/mysql
             - ./mariadb:/docker-entrypoint-initdb.d
-        deploy:
-            resources:
-                limits:
-                    cpus: '0.001'
-                    memory: 256M
-                reservations:
-                    cpus: '0.0001'
-                    memory: 125M
         networks:
             - openpantoufle
     cadvisor:
@@ -124,10 +100,6 @@ services:
     grafana:
         image: grafana/grafana
         container_name: grafana
-        labels:
-            - 'traefik.enable=true'
-            - 'traefik.port=32400'
-            - 'traefik.frontend.rule=Host:plex.e799416.online-server.cloud'
         env_file:
             - grafana.env
         depends_on:
@@ -141,31 +113,25 @@ services:
             - "3000:3000"
         networks:
             - openpantoufle
-    # minecraft:
-    # container_name: minecraft
-    # restart: always
-    # ports:
-    #     - "25665:25665"
-    # volumes:
-    #     - ../volumes/common/minecraft:/app
-    traefik:
+    minecraft:
+        container_name: minecraft
+        build:
+            context: ./minecraft
+            dockerfile: Dockerfile
         restart: always
-        image: traefik
-        container_name: traefik
         ports:
-            - '80:80'
-            - '443:443'
-            - '8080:8080'
-        labels:
-            - 'traefik.enable=true'
-            - 'traefik.port=8080'
-            - 'traefik.frontend.rule=Host:traefik.e799416.online-server.cloud'
+            - "25665:25665"
+            - "25080:8080"
         volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
-            - ./traefik:/etc/traefik
-        networks:
-            - openpantoufle
-
+            - ../volumes/common/minecraft:/app
+        # services:
+        #     nginx-proxy:
+        #     image: jwilder/nginx-proxy
+        #     ports:
+        #         - "80:80"
+        #     volumes:
+        #         - /var/run/docker.sock:/tmp/docker.sock:ro
+        #
 networks:
     openpantoufle:
         driver: bridge
