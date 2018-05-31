@@ -20,11 +20,9 @@ RUN echo 0 > /etc/selinux/enforce \
     && wget http://mcmyadmin.com/Downloads/MCMA2_glibc26_2.zip \
         -O /app/mcmyadmin/mcmyadmin.zip \
     && unzip /app/mcmyadmin/mcmyadmin.zip \
-    && mv /app/mcmyadmin/mcmyadmin.zip /tmp/ \
-    && echo $(ls /app/mcmyadmin) \
-    && ln -s /app/mcmyadmin/MCMA2_Linux_X86_64 /bin
+    && mv /app/mcmyadmin/mcmyadmin.zip /tmp/
 
 EXPOSE 25665
 EXPOSE 8080
 
-CMD ["mcmyadmin -setpass ertyuiop -nonotice"]
+CMD ["./app/mcmyadmin/MCMA2_Linux_X86_64 -setpass ertyuiop -nonotice"]
