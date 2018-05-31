@@ -3,24 +3,17 @@ services:
     portainer:
         container_name: portainer
         image: portainer/portainer
-        environment:
-            - VIRTUAL_HOST=grafana.e799416.online-server.cloud
         command: --admin-password '$$2y$$05$$EGWtI1m7uYTLwX6d0o.RH.LD1mNlP6ysG2yXCYZlrk0gJ4442mYNO' -H unix:///var/run/docker.sock
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - portainer-data:/data
-        # network_mode: "host"
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.port=9001'
+            - 'traefik.frontend.rule=Host:portainer.e799416.online-server.cloud'
         networks:
             - openpantoufle
         restart: always
-        deploy:
-            resources:
-                limits:
-                    cpus: '0.001'
-                    memory: 256M
-                reservations:
-                    cpus: '0.0001'
-                    memory: 125M
     plex:
         container_name: plex
         environment:
@@ -28,6 +21,10 @@ services:
         env_file:
             - plex.env
         image: plexinc/pms-docker
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.port=32400'
+            - 'traefik.frontend.rule=Host:plex.e799416.online-server.cloud'
         ports:
             - "32400:32400/tcp"
             - "3005:3005/tcp"
@@ -44,14 +41,6 @@ services:
         networks:
             - openpantoufle
         restart: always
-        deploy:
-            resources:
-                limits:
-                    cpus: '0.001'
-                    memory: 256M
-                reservations:
-                    cpus: '0.0001'
-                    memory: 125M
     owncloud:
         container_name: owncloud
         image: owncloud
@@ -107,9 +96,9 @@ services:
             - /sys:/sys:ro
             - /var/lib/docker/:/var/lib/docker:ro
         expose:
-            - 8080
+            - 8888
         ports:
-            - "8080:8080"
+            - "8888:8888"
         networks:
               - openpantoufle
     prometheus:
@@ -135,8 +124,10 @@ services:
     grafana:
         image: grafana/grafana
         container_name: grafana
-        environment:
-            - VIRTUAL_HOST=grafana.e799416.online-server.cloud
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.port=32400'
+            - 'traefik.frontend.rule=Host:plex.e799416.online-server.cloud'
         env_file:
             - grafana.env
         depends_on:
@@ -157,27 +148,21 @@ services:
     #     - "25665:25665"
     # volumes:
     #     - ../volumes/common/minecraft:/app
-    nginx-proxy:
-        container_name: nginx-proxy
-        image: jwilder/nginx-proxy:alpine
+    traefik:
+        restart: always
+        image: traefik
+        container_name: traefik
         ports:
-          - "80:80"
+            - '80:80'
+            - '443:443'
+            - '8080:8080'
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.port=8080'
+            - 'traefik.frontend.rule=Host:traefik.e799416.online-server.cloud'
         volumes:
-            - /etc/nginx/vhost.d
-            - /usr/share/nginx/html
-            - /etc/nginx/certs:/etc/nginx/certs:ro
-            - /var/run/docker.sock:/tmp/docker.sock:ro
-        networks:
-            - openpantoufle
-    letsencrypt-nginx-proxy:
-        container_name: letsencrypt-nginx-proxy
-        image: 'jrcs/letsencrypt-nginx-proxy-companion'
-        volumes:
-          - /etc/nginx/certs:/etc/nginx/certs
-          - /var/run/docker.sock:/var/run/docker.sock:ro
-        volumes_from:
-          - nginx-proxy
-
+            - /var/run/docker.sock:/var/run/docker.sock
+            - ./traefik:/etc/traefik
 networks:
     openpantoufle:
         driver: bridge

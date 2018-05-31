@@ -1,0 +1,41 @@
+defaultEntryPoints = ["http", "https", "ws", "wss"]
+
+################################################################
+# Web configuration backend
+################################################################
+[web]
+address = ":8080"
+[web.auth.basic]
+# User: user | Password: password
+users = ["user:$2y$05$zNs3wc5UPB4su8vbFugVPuKEaLJXMf5Z.9hAI1ulJpBbhbBprfppO"]
+
+################################################################
+# Entry-points configuration
+################################################################
+[entryPoints]
+  [entryPoints.http]
+    address = ":80"
+    [entryPoints.http.redirect]
+      entryPoint = "https"
+  [entryPoints.https]
+    address = ":443"
+    [entryPoints.https.tls]
+
+################################################################
+# Docker configuration backend
+################################################################
+[docker]
+domain = "e799416.online-server"
+watch = true
+exposedbydefault = false
+
+################################################################
+# Let's encrypt
+################################################################
+[acme]
+email = "user@example.com"
+storageFile = "/etc/traefik/acme.json"
+onDemand = false
+onHostRule = true
+entryPoint = "https"
+
