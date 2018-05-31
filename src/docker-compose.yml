@@ -4,7 +4,7 @@ services:
         container_name: portainer
         image: portainer/portainer
         environment:
-            - VIRTUAL_HOST=portainer.local
+            - VIRTUAL_HOST=grafana.e799416.online-server.cloud
         command: --admin-password '$$2y$$05$$EGWtI1m7uYTLwX6d0o.RH.LD1mNlP6ysG2yXCYZlrk0gJ4442mYNO' -H unix:///var/run/docker.sock
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
@@ -24,14 +24,23 @@ services:
     plex:
         container_name: plex
         environment:
-            - VIRTUAL_HOST=plex.local
+            - VIRTUAL_HOST=plex.e799416.online-server.cloud
         env_file:
             - plex.env
         image: plexinc/pms-docker
+        ports:
+            - "32400:32400/tcp"
+            - "3005:3005/tcp"
+            - "8324:8324/tcp"
+            - "32469:32469/tcp"
+            - "1900:1900/udp"
+            - "32410:32410/udp"
+            - "32412:32412/udp"
+            - "32413:32413/udp"
+            - "32414:32414/udp"
         volumes:
             - ../volumes/plex/config:/config
             - ../volumes/common/movies:/data/
-        # network_mode: "host"
         networks:
             - openpantoufle
         restart: always
@@ -47,7 +56,7 @@ services:
         container_name: owncloud
         image: owncloud
         environment:
-            - VIRTUAL_HOST=owncloud.local
+            - VIRTUAL_HOST=owncloud.e799416.online-server.cloud
         restart: always
         ports:
             - "8881:80"
@@ -70,8 +79,6 @@ services:
             - openpantoufle
     mariadb:
         container_name: mariadb
-        environment:
-            - VIRTUAL_HOST=mariadb.local
         env_file:
             - mariadb.env
         image: mariadb
@@ -129,7 +136,7 @@ services:
         image: grafana/grafana
         container_name: grafana
         environment:
-            - VIRTUAL_HOST=grafana.local
+            - VIRTUAL_HOST=grafana.e799416.online-server.cloud
         env_file:
             - grafana.env
         depends_on:
@@ -156,10 +163,20 @@ services:
         ports:
           - "80:80"
         volumes:
-          - /var/run/docker.sock:/tmp/docker.sock:ro
+            - /etc/nginx/vhost.d
+            - /usr/share/nginx/html
+            - /etc/nginx/certs:/etc/nginx/certs:ro
+            - /var/run/docker.sock:/tmp/docker.sock:ro
         networks:
             - openpantoufle
-
+    letsencrypt-nginx-proxy:
+        container_name: letsencrypt-nginx-proxy
+        image: 'jrcs/letsencrypt-nginx-proxy-companion'
+        volumes:
+          - /etc/nginx/certs:/etc/nginx/certs
+          - /var/run/docker.sock:/var/run/docker.sock:ro
+        volumes_from:
+          - nginx-proxy
 
 networks:
     openpantoufle:
