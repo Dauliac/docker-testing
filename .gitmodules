@@ -1,6 +1,0 @@
-[submodule "src/ui-for-docker"]
-	path = src/ui-for-docker
-	url = https://github.com/kevana/ui-for-docker
-[submodule "src/pms-docker"]
-	path = src/pms-docker
-	url = https://github.com/plexinc/pms-docker.git
