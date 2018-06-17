@@ -1,17 +1,5 @@
 version: '3'
 services:
-    portainer:
-        container_name: portainer
-        image: portainer/portainer
-        command: --admin-password '$$2y$$05$$EGWtI1m7uYTLwX6d0o.RH.LD1mNlP6ysG2yXCYZlrk0gJ4442mYNO' -H unix:///var/run/docker.sock
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
-            - portainer-data:/data
-        networks:
-            - openpantoufle
-        ports:
-            - "9007:9000"
-        restart: always
     plex:
         container_name: plex
         image: plexinc/pms-docker
@@ -25,7 +13,7 @@ services:
         image: owncloud
         restart: always
         ports:
-            - "9005:80"
+            - "9001:80"
         depends_on:
             - mariadb
         volumes:
@@ -42,56 +30,10 @@ services:
         image: mariadb
         restart: always
         ports:
-            - "3306:3306"
+            - "9002:3306"
         volumes:
             - owncloud-data:/var/lib/mysql
             - ./mariadb:/docker-entrypoint-initdb.d
-        networks:
-            - openpantoufle
-    cadvisor:
-        image: google/cadvisor
-        container_name: cadvisor
-        volumes:
-            - /:/rootfs:ro
-            - /var/run:/var/run:rw
-            - /sys:/sys:ro
-            - /var/lib/docker/:/var/lib/docker:ro
-        ports:
-            - "9004:8080"
-        networks:
-              - openpantoufle
-    prometheus:
-        image: prom/prometheus:v2.0.0
-        container_name: prometheus
-        depends_on:
-            - cadvisor
-        volumes:
-            - ./prometheus:/etc/prometheus/
-            - prometheus-data:/prometheus
-        command:
-            - '--config.file=/etc/prometheus/prometheus.yml'
-            - '--storage.tsdb.path=/prometheus'
-            - '--web.console.libraries=/etc/prometgrafanaheus/console_libraries'
-            - '--web.console.templates=/etc/prometheus/consoles'
-            - '--storage.tsdb.retention=200h'
-        ports:
-            - "9090:9090"
-        networks:
-            - openpantoufle
-    grafana:
-        image: grafana/grafana
-        container_name: grafana
-        env_file:
-            - grafana.env
-        depends_on:
-            - prometheus
-        volumes:
-            - grafana-data:/var/lib/grafana
-            - ./grafana:/etc/grafana/provisioning
-        expose:
-            - 3000
-        ports:
-            - "3000:3000"
         networks:
             - openpantoufle
     minecraft:
@@ -102,17 +44,13 @@ services:
         restart: always
         ports:
             - "25565:25565"
-            - "9001:8080"
+            - "9003:8080"
         volumes:
             - ../volumes/common/minecraft:/root/Minecraft/world
         networks:
             - openpantoufle
-
 networks:
     openpantoufle:
         driver: bridge
 volumes:
-    prometheus-data: {}
-    grafana-data: {}
     owncloud-data: {}
-    portainer-data: {}

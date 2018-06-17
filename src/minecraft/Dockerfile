@@ -5,7 +5,7 @@ Workdir /app
 RUN echo 0 > /etc/selinux/enforce \
     && echo "nameserver 1.1.1.1" >> /etc/resolv.conf \
     && yum update -y \
-    && yum install -y wget  nzip \
+    && yum install -y wget  unzip \
     && wget --no-cookies --no-check-certificate \
       --header "Cookie:\
       gpw_e24=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjre8-downloads-2133155.html;\
